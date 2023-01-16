@@ -12,6 +12,8 @@ namespace ProyectoFinal_Grupo7_IDS326
 {
     public partial class frmCuentas : Form
     {
+        DataTable dt = new DataTable();
+        
         public frmCuentas()
         {
             InitializeComponent();
@@ -20,10 +22,11 @@ namespace ProyectoFinal_Grupo7_IDS326
         private void frmCuentas_Load(object sender, EventArgs e)
         {
             pnlLateral.Visible = false;
-            foreach (var item in Program.usuario.cuentas)
-            {
-                cmbCuentas.Items.Add(item.Alias);
-            }
+            dt.Columns.Add("No. Cuenta", typeof(string));
+            dt.Columns.Add("Alias", typeof(string));
+            dt.Columns.Add("Balance", typeof(decimal));
+            dt.Columns.Add("Tipo", typeof(string));
+            CargarDatos();
         }
 
         private void btnCrearCuenta_Click(object sender, EventArgs e)
@@ -39,7 +42,7 @@ namespace ProyectoFinal_Grupo7_IDS326
             {
                 Program.usuario.crearCuenta(txtNoCuenta.Text, txtAlias.Text, decimal.Parse(txtBalance.Text), cmbTipo.SelectedItem.ToString());
                 MessageBox.Show("Cuenta creada correctamente", "Cuenta creada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cmbCuentas.Items.Add(txtAlias.Text);                              
+                CargarDatos();
             }
             catch (Exception ex)
             {
@@ -50,6 +53,26 @@ namespace ProyectoFinal_Grupo7_IDS326
         private void btnCerrarPnlSuperior_Click(object sender, EventArgs e)
         {
             pnlLateral.Visible = false;
-        }       
+            
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CargarDatos()
+        {
+            if (Program.usuario.cuentas.Count > 0)
+            {
+                foreach (var item in Program.usuario.cuentas)
+                {
+                    string[] lst = {item.NoCuenta, item.Alias, item.Balance.ToString(), item.Tipo};
+                    dt.Rows.Add(lst);
+                }
+            }
+            dgvCuentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvCuentas.DataSource = dt;
+        }
     }
 }

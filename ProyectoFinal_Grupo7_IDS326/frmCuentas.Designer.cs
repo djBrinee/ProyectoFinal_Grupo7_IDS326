@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             this.btnTransaccion = new System.Windows.Forms.Button();
-            this.dgvCuentas = new System.Windows.Forms.DataGridView();
             this.pnlSuperior = new System.Windows.Forms.Panel();
-            this.cmbCuentas = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.btnEditarCuenta = new System.Windows.Forms.PictureBox();
             this.btnEliminarCuenta = new System.Windows.Forms.PictureBox();
             this.btnCrearCuenta = new System.Windows.Forms.PictureBox();
@@ -49,21 +46,20 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.btnCrear = new System.Windows.Forms.Button();
-            this.PnlContenedor = new System.Windows.Forms.Panel();
-            this.lblBalance = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.pnlInferior = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvCuentas = new System.Windows.Forms.DataGridView();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarCuenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarCuenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCrearCuenta)).BeginInit();
             this.pnlLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrarPnlSuperior)).BeginInit();
-            this.PnlContenedor.SuspendLayout();
             this.pnlInferior.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTransaccion
@@ -75,21 +71,8 @@
             this.btnTransaccion.Text = "Crear transaccion";
             this.btnTransaccion.UseVisualStyleBackColor = true;
             // 
-            // dgvCuentas
-            // 
-            this.dgvCuentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCuentas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCuentas.Location = new System.Drawing.Point(0, 0);
-            this.dgvCuentas.Name = "dgvCuentas";
-            this.dgvCuentas.RowHeadersWidth = 51;
-            this.dgvCuentas.RowTemplate.Height = 24;
-            this.dgvCuentas.Size = new System.Drawing.Size(975, 457);
-            this.dgvCuentas.TabIndex = 14;
-            // 
             // pnlSuperior
             // 
-            this.pnlSuperior.Controls.Add(this.cmbCuentas);
-            this.pnlSuperior.Controls.Add(this.label7);
             this.pnlSuperior.Controls.Add(this.btnEditarCuenta);
             this.pnlSuperior.Controls.Add(this.btnEliminarCuenta);
             this.pnlSuperior.Controls.Add(this.btnCrearCuenta);
@@ -98,25 +81,6 @@
             this.pnlSuperior.Name = "pnlSuperior";
             this.pnlSuperior.Size = new System.Drawing.Size(975, 50);
             this.pnlSuperior.TabIndex = 20;
-            // 
-            // cmbCuentas
-            // 
-            this.cmbCuentas.FormattingEnabled = true;
-            this.cmbCuentas.Location = new System.Drawing.Point(210, 14);
-            this.cmbCuentas.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.cmbCuentas.Name = "cmbCuentas";
-            this.cmbCuentas.Size = new System.Drawing.Size(234, 24);
-            this.cmbCuentas.TabIndex = 23;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 13);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(179, 25);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "Seleccionar cuenta";
             // 
             // btnEditarCuenta
             // 
@@ -180,6 +144,7 @@
             this.btnEditar.TabIndex = 23;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnCerrarPnlSuperior
             // 
@@ -289,42 +254,6 @@
             this.btnCrear.UseVisualStyleBackColor = true;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
-            // PnlContenedor
-            // 
-            this.PnlContenedor.Controls.Add(this.lblBalance);
-            this.PnlContenedor.Controls.Add(this.label6);
-            this.PnlContenedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlContenedor.Location = new System.Drawing.Point(354, 50);
-            this.PnlContenedor.Name = "PnlContenedor";
-            this.PnlContenedor.Size = new System.Drawing.Size(621, 87);
-            this.PnlContenedor.TabIndex = 22;
-            // 
-            // lblBalance
-            // 
-            this.lblBalance.AutoSize = true;
-            this.lblBalance.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBalance.Location = new System.Drawing.Point(140, 0);
-            this.lblBalance.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
-            this.lblBalance.Name = "lblBalance";
-            this.lblBalance.Padding = new System.Windows.Forms.Padding(0, 25, 0, 0);
-            this.lblBalance.Size = new System.Drawing.Size(45, 50);
-            this.lblBalance.TabIndex = 15;
-            this.lblBalance.Text = "200";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
-            this.label6.Name = "label6";
-            this.label6.Padding = new System.Windows.Forms.Padding(0, 25, 0, 0);
-            this.label6.Size = new System.Drawing.Size(140, 50);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Balance actual";
-            // 
             // pnlInferior
             // 
             this.pnlInferior.Controls.Add(this.btnSalir);
@@ -344,32 +273,49 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dgvCuentas);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(354, 50);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(621, 373);
+            this.panel1.TabIndex = 24;
+            // 
+            // dgvCuentas
+            // 
+            this.dgvCuentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCuentas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCuentas.Location = new System.Drawing.Point(0, 0);
+            this.dgvCuentas.Name = "dgvCuentas";
+            this.dgvCuentas.RowHeadersWidth = 51;
+            this.dgvCuentas.RowTemplate.Height = 24;
+            this.dgvCuentas.Size = new System.Drawing.Size(621, 373);
+            this.dgvCuentas.TabIndex = 0;
+            // 
             // frmCuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(975, 457);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlInferior);
-            this.Controls.Add(this.PnlContenedor);
             this.Controls.Add(this.pnlLateral);
             this.Controls.Add(this.pnlSuperior);
             this.Controls.Add(this.btnTransaccion);
-            this.Controls.Add(this.dgvCuentas);
             this.Name = "frmCuentas";
             this.Text = "Cuentas";
             this.Load += new System.EventHandler(this.frmCuentas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).EndInit();
             this.pnlSuperior.ResumeLayout(false);
-            this.pnlSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarCuenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarCuenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCrearCuenta)).EndInit();
             this.pnlLateral.ResumeLayout(false);
             this.pnlLateral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrarPnlSuperior)).EndInit();
-            this.PnlContenedor.ResumeLayout(false);
-            this.PnlContenedor.PerformLayout();
             this.pnlInferior.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -379,9 +325,7 @@
         private System.Windows.Forms.PictureBox btnCrearCuenta;
         private System.Windows.Forms.PictureBox btnEliminarCuenta;
         private System.Windows.Forms.Button btnTransaccion;
-        private System.Windows.Forms.DataGridView dgvCuentas;
         private System.Windows.Forms.Panel pnlSuperior;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel pnlLateral;
         private System.Windows.Forms.PictureBox btnCerrarPnlSuperior;
         private System.Windows.Forms.Label label1;
@@ -394,13 +338,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.Button btnCrear;
-        private System.Windows.Forms.Panel PnlContenedor;
-        private System.Windows.Forms.Label lblBalance;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel pnlInferior;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnEditar;
-        public System.Windows.Forms.ComboBox cmbCuentas;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dgvCuentas;
     }
 }
