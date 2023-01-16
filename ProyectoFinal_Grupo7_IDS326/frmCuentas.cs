@@ -63,6 +63,7 @@ namespace ProyectoFinal_Grupo7_IDS326
 
         private void CargarDatos()
         {
+            dt.Rows.Clear();
             if (Program.usuario.cuentas.Count > 0)
             {
                 foreach (var item in Program.usuario.cuentas)
