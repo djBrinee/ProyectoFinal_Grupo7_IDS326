@@ -94,6 +94,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\close.png" />
     <None Include="Resources\add.png" />
     <Content Include="Resources\create.png" />
     <None Include="Resources\update1.png" />

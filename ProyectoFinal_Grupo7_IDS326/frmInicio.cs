@@ -17,19 +17,26 @@ namespace ProyectoFinal_Grupo7_IDS326
         {
             InitializeComponent();
         }
-
-        private void frmInicio_Load(object sender, EventArgs e)
+        
+        private Form formActivo = null;
+        private void AbrirFormHijo(Form formHijo)
         {
-            foreach (var item in Program.usuario.cuentas)
-            {
-                cmbCuentas.Items.Add(item.Alias);
-            }
+            if (formActivo != null)
+                formActivo.Close();
+            formActivo = formHijo;
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill;
+            pnlContenedor.Controls.Add(formHijo);
+            pnlContenedor.Tag = formHijo;
+            formHijo.BringToFront();
+            formHijo.Show();
         }
 
-        private void btnCrearCuenta_Click(object sender, EventArgs e)
+        private void btnCuentas_Click(object sender, EventArgs e)
         {
-            frmCuentas cuentas = new frmCuentas();          
-            cuentas.Show();
+            frmCuentas cuentas = new frmCuentas();
+            AbrirFormHijo(cuentas);
         }
     }
 }
