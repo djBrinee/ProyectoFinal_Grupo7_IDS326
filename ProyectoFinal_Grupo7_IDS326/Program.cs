@@ -8,6 +8,7 @@ namespace ProyectoFinal_Grupo7_IDS326
 {
     internal static class Program
     {
+        public static Usuario usuario = new Usuario();
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +17,7 @@ namespace ProyectoFinal_Grupo7_IDS326
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmInicio());
         }
     }
 }
