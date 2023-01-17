@@ -14,6 +14,15 @@ namespace ProyectoFinal_Grupo7_IDS326.Models
         public string Tipo { get; set; }
         public DateTime? FechaCreacion { get; set; } = DateTime.Now;
         public List<Transacciones> Transacciones { get; set; } = new List<Transacciones>();
+
+        public Cuentas(string NoCuenta, string Alias, decimal Balance, string Tipo)
+        {
+            this.NoCuenta = NoCuenta;
+            this.Alias = Alias;
+            this.Balance = Balance;
+            this.Tipo = Tipo;
+            this.FechaCreacion = DateTime.Now;
+        }
         
         public bool ActualizarCuenta(string tipo, string alias)
         {

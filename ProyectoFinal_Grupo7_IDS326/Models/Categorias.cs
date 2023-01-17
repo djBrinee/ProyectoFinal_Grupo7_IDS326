@@ -10,6 +10,11 @@ namespace ProyectoFinal_Grupo7_IDS326.Models
     {
         public string Nombre { get; set; }
 
+        public Categorias(string nombre)
+        {
+            this.Nombre = nombre;
+        }
+
         public bool ActualizarCategoria(string nombre)
         {
             try

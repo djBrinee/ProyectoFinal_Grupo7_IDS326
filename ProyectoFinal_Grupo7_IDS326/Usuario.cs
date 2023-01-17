@@ -16,13 +16,7 @@ namespace ProyectoFinal_Grupo7_IDS326
         {
             try
             {
-                Cuentas cuenta = new Cuentas()
-                {
-                    NoCuenta = NoCuenta,
-                    Alias = Alias,
-                    Balance = balance,
-                    Tipo = tipo
-                };
+                Cuentas cuenta = new Cuentas(NoCuenta, Alias, balance, tipo);               
                 cuentas.Add(cuenta);
                 return true;
             }
@@ -35,10 +29,7 @@ namespace ProyectoFinal_Grupo7_IDS326
         {
             try
             {
-                Categorias categoria = new Categorias()
-                {
-                    Nombre = nombre
-                };
+                Categorias categoria = new Categorias(nombre);
                 categorias.Add(categoria);
                 return true;
             }
