@@ -11,7 +11,7 @@ namespace ProyectoFinal_Grupo7_IDS326.Models
     {
         public static void MessageBoxCamposVacios()
         {
-            MessageBox.Show("Cuenta editada correctamente", "Cuenta editada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Debe llenar todos los campos", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         public static void MessageBoxError(Exception ex)
         {

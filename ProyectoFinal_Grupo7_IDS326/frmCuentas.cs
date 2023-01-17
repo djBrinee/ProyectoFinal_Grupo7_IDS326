@@ -33,6 +33,7 @@ namespace ProyectoFinal_Grupo7_IDS326
         {
             pnlLateral.Visible = true;
             btnEditar.Visible = false;
+            btnCrear.Visible = true;
 
         }
 
@@ -40,7 +41,7 @@ namespace ProyectoFinal_Grupo7_IDS326
         {
             try
             {
-                if (cmbTipo.SelectedIndex >= 0 && String.IsNullOrEmpty(txtNoCuenta.Text) && String.IsNullOrEmpty(txtAlias.Text) && String.IsNullOrEmpty(txtBalance.Text))
+                if (cmbTipo.SelectedIndex >= 0 && !String.IsNullOrEmpty(txtNoCuenta.Text) && !String.IsNullOrEmpty(txtAlias.Text) && !String.IsNullOrEmpty(txtBalance.Text))
                 {
                     if(decimal.TryParse(txtBalance.Text,out decimal balance))
                     {
