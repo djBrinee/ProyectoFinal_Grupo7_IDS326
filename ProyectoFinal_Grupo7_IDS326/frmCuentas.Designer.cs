@@ -34,8 +34,8 @@
             this.btnEliminarCuenta = new System.Windows.Forms.PictureBox();
             this.btnCrearCuenta = new System.Windows.Forms.PictureBox();
             this.pnlLateral = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnCerrarPnlSuperior = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNoCuenta = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,7 +56,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarCuenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCrearCuenta)).BeginInit();
             this.pnlLateral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarPnlSuperior)).BeginInit();
             this.pnlInferior.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).BeginInit();
@@ -92,6 +91,7 @@
             this.btnEditarCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnEditarCuenta.TabIndex = 18;
             this.btnEditarCuenta.TabStop = false;
+            this.btnEditarCuenta.Click += new System.EventHandler(this.btnEditarCuenta_Click);
             // 
             // btnEliminarCuenta
             // 
@@ -103,6 +103,7 @@
             this.btnEliminarCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnEliminarCuenta.TabIndex = 16;
             this.btnEliminarCuenta.TabStop = false;
+            this.btnEliminarCuenta.Click += new System.EventHandler(this.btnEliminarCuenta_Click);
             // 
             // btnCrearCuenta
             // 
@@ -118,8 +119,8 @@
             // 
             // pnlLateral
             // 
+            this.pnlLateral.Controls.Add(this.btnCerrar);
             this.pnlLateral.Controls.Add(this.btnEditar);
-            this.pnlLateral.Controls.Add(this.btnCerrarPnlSuperior);
             this.pnlLateral.Controls.Add(this.label1);
             this.pnlLateral.Controls.Add(this.txtNoCuenta);
             this.pnlLateral.Controls.Add(this.label2);
@@ -130,32 +131,31 @@
             this.pnlLateral.Controls.Add(this.label5);
             this.pnlLateral.Controls.Add(this.cmbTipo);
             this.pnlLateral.Controls.Add(this.btnCrear);
-            this.pnlLateral.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlLateral.Location = new System.Drawing.Point(0, 50);
+            this.pnlLateral.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlLateral.Location = new System.Drawing.Point(621, 50);
             this.pnlLateral.Name = "pnlLateral";
             this.pnlLateral.Size = new System.Drawing.Size(354, 407);
             this.pnlLateral.TabIndex = 21;
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Location = new System.Drawing.Point(206, 350);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCerrar.TabIndex = 24;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(145, 359);
+            this.btnEditar.Location = new System.Drawing.Point(109, 350);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 23;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnCerrarPnlSuperior
-            // 
-            this.btnCerrarPnlSuperior.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.close;
-            this.btnCerrarPnlSuperior.Location = new System.Drawing.Point(313, 0);
-            this.btnCerrarPnlSuperior.Name = "btnCerrarPnlSuperior";
-            this.btnCerrarPnlSuperior.Size = new System.Drawing.Size(41, 36);
-            this.btnCerrarPnlSuperior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnCerrarPnlSuperior.TabIndex = 22;
-            this.btnCerrarPnlSuperior.TabStop = false;
-            this.btnCerrarPnlSuperior.Click += new System.EventHandler(this.btnCerrarPnlSuperior_Click);
             // 
             // label1
             // 
@@ -236,7 +236,6 @@
             this.cmbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Items.AddRange(new object[] {
-            "",
             "Corriente",
             "Ahorro"});
             this.cmbTipo.Location = new System.Drawing.Point(128, 282);
@@ -246,7 +245,7 @@
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(145, 359);
+            this.btnCrear.Location = new System.Drawing.Point(109, 350);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(75, 23);
             this.btnCrear.TabIndex = 9;
@@ -258,7 +257,7 @@
             // 
             this.pnlInferior.Controls.Add(this.btnSalir);
             this.pnlInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlInferior.Location = new System.Drawing.Point(354, 423);
+            this.pnlInferior.Location = new System.Drawing.Point(0, 423);
             this.pnlInferior.Name = "pnlInferior";
             this.pnlInferior.Size = new System.Drawing.Size(621, 34);
             this.pnlInferior.TabIndex = 23;
@@ -277,13 +276,14 @@
             // 
             this.panel1.Controls.Add(this.dgvCuentas);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(354, 50);
+            this.panel1.Location = new System.Drawing.Point(0, 50);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(621, 373);
             this.panel1.TabIndex = 24;
             // 
             // dgvCuentas
             // 
+            this.dgvCuentas.AllowUserToAddRows = false;
             this.dgvCuentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCuentas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCuentas.Location = new System.Drawing.Point(0, 0);
@@ -312,7 +312,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCrearCuenta)).EndInit();
             this.pnlLateral.ResumeLayout(false);
             this.pnlLateral.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarPnlSuperior)).EndInit();
             this.pnlInferior.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).EndInit();
@@ -327,7 +326,6 @@
         private System.Windows.Forms.Button btnTransaccion;
         private System.Windows.Forms.Panel pnlSuperior;
         private System.Windows.Forms.Panel pnlLateral;
-        private System.Windows.Forms.PictureBox btnCerrarPnlSuperior;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNoCuenta;
         private System.Windows.Forms.Label label2;
@@ -344,5 +342,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvCuentas;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

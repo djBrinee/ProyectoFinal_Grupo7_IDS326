@@ -15,7 +15,7 @@ namespace ProyectoFinal_Grupo7_IDS326.Models
         public DateTime? FechaCreacion { get; set; } = DateTime.Now;
         public List<Transacciones> Transacciones { get; set; } = new List<Transacciones>();
         
-        private bool ActualizarCuenta(string tipo, string alias)
+        public bool ActualizarCuenta(string tipo, string alias)
         {
             try
             {
