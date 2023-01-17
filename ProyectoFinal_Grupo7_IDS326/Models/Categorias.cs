@@ -8,7 +8,21 @@ namespace ProyectoFinal_Grupo7_IDS326.Models
 {
     public class Categorias
     {
-        public int Id { get; set; }
         public string Nombre { get; set; }
+
+        public bool ActualizarCategoria(string nombre)
+        {
+            try
+            {
+                Nombre = nombre;
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
+
+   
 }

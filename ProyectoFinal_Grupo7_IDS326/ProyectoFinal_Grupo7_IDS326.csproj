@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategorias.Designer.cs">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCuentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,10 +66,14 @@
     </Compile>
     <Compile Include="Models\Categorias.cs" />
     <Compile Include="Models\Cuentas.cs" />
+    <Compile Include="Models\Helpers.cs" />
     <Compile Include="Models\Transacciones.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
+    <EmbeddedResource Include="frmCategorias.resx">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCuentas.resx">
       <DependentUpon>frmCuentas.cs</DependentUpon>
     </EmbeddedResource>

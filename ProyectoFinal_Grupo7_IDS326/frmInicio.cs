@@ -35,8 +35,18 @@ namespace ProyectoFinal_Grupo7_IDS326
 
         private void btnCuentas_Click(object sender, EventArgs e)
         {
-            frmCuentas cuentas = new frmCuentas();
-            AbrirFormHijo(cuentas);
+            frmCuentas frmCuenta = new frmCuentas();
+            AbrirFormHijo(frmCuenta);
+        }
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            if (formActivo != null)
+                formActivo.Close();
+        }
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            frmCategorias frmCategoria = new frmCategorias();
+            AbrirFormHijo(frmCategoria);
         }
     }
 }

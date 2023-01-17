@@ -10,6 +10,7 @@ namespace ProyectoFinal_Grupo7_IDS326
     public class Usuario
     {
         public List<Cuentas> cuentas { get; set; } =  new List<Cuentas>();
+        public List<Categorias> categorias { get; set; } =  new List<Categorias>();
 
         public bool crearCuenta(string NoCuenta, string Alias, decimal balance, string tipo)
         {
@@ -29,7 +30,23 @@ namespace ProyectoFinal_Grupo7_IDS326
             {
                 return false;
             }
-        } 
+        }
+        public bool crearCategoria(string nombre)
+        {
+            try
+            {
+                Categorias categoria = new Categorias()
+                {
+                    Nombre = nombre
+                };
+                categorias.Add(categoria);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
 
     }
 

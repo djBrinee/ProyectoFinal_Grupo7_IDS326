@@ -14,12 +14,11 @@ namespace ProyectoFinal_Grupo7_IDS326
     public partial class frmCuentas : Form
     {
         DataTable dt = new DataTable();
-        
+
         public frmCuentas()
         {
             InitializeComponent();
         }
-
         private void frmCuentas_Load(object sender, EventArgs e)
         {
             pnlLateral.Visible = false;
@@ -41,25 +40,43 @@ namespace ProyectoFinal_Grupo7_IDS326
         {
             try
             {
-                Program.usuario.crearCuenta(txtNoCuenta.Text, txtAlias.Text, decimal.Parse(txtBalance.Text), cmbTipo.SelectedItem.ToString());
-                MessageBox.Show("Cuenta creada correctamente", "Cuenta creada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CargarDatos();
-                VaciarCampos();
+                if (cmbTipo.SelectedIndex >= 0 && String.IsNullOrEmpty(txtNoCuenta.Text) && String.IsNullOrEmpty(txtAlias.Text) && String.IsNullOrEmpty(txtBalance.Text))
+                {
+                    if(decimal.TryParse(txtBalance.Text,out decimal balance))
+                    {
+                        Program.usuario.crearCuenta(txtNoCuenta.Text, txtAlias.Text, balance, cmbTipo.SelectedItem.ToString());
+                        MessageBox.Show("Cuenta creada correctamente", "Cuenta creada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CargarDatos();
+                        VaciarCampos();
+                    }
+                    else
+                        MessageBox.Show("El balance debe ser un numero.", "Balance no es númerico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                else
+                    Helpers.MessageBoxCamposVacios();
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Ha ocurrido un problema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Helpers.MessageBoxError(ex);
             }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Cuentas cuenta = Program.usuario.cuentas.Find(c => c.NoCuenta == txtNoCuenta.Text);
-            cuenta.ActualizarCuenta(cmbTipo.Text, txtAlias.Text);
-            MessageBox.Show("Cuenta editada correctamente", "Cuenta editada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (cmbTipo.SelectedIndex >= 0 && String.IsNullOrEmpty(txtAlias.Text))
+            {
+                Cuentas cuenta = Program.usuario.cuentas.Find(c => c.NoCuenta == txtNoCuenta.Text);
+                cuenta.ActualizarCuenta(cmbTipo.Text, txtAlias.Text);
+                MessageBox.Show("Cuenta editada correctamente", "Cuenta editada", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            CargarDatos();
-            
+                CargarDatos();
+            }
+            else
+                Helpers.MessageBoxCamposVacios();
+
+
         }
 
         private void CargarDatos()
