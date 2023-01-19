@@ -43,6 +43,8 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarCategoria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarCuenta)).BeginInit();
@@ -115,6 +117,8 @@
             // 
             // pnlLateral
             // 
+            this.pnlLateral.Controls.Add(this.cmbTipo);
+            this.pnlLateral.Controls.Add(this.label3);
             this.pnlLateral.Controls.Add(this.btnCerrar);
             this.pnlLateral.Controls.Add(this.btnEditar);
             this.pnlLateral.Controls.Add(this.label1);
@@ -130,7 +134,7 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(154, 165);
+            this.btnCerrar.Location = new System.Drawing.Point(154, 191);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(56, 19);
@@ -141,7 +145,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(82, 165);
+            this.btnEditar.Location = new System.Drawing.Point(82, 191);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(56, 19);
@@ -183,7 +187,7 @@
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(82, 165);
+            this.btnCrear.Location = new System.Drawing.Point(82, 191);
             this.btnCrear.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(56, 19);
@@ -214,6 +218,29 @@
             this.dgvCategorias.RowTemplate.Height = 24;
             this.dgvCategorias.Size = new System.Drawing.Size(463, 360);
             this.dgvCategorias.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(52, 159);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 17);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Tipo";
+            // 
+            // cmbTipo
+            // 
+            this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.Items.AddRange(new object[] {
+            "Ingreso",
+            "Gasto"});
+            this.cmbTipo.Location = new System.Drawing.Point(96, 159);
+            this.cmbTipo.Name = "cmbTipo";
+            this.cmbTipo.Size = new System.Drawing.Size(164, 21);
+            this.cmbTipo.TabIndex = 27;
             // 
             // frmCategorias
             // 
@@ -256,5 +283,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvCategorias;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.ComboBox cmbTipo;
+        private System.Windows.Forms.Label label3;
     }
 }

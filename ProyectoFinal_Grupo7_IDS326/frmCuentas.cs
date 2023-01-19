@@ -66,7 +66,7 @@ namespace ProyectoFinal_Grupo7_IDS326
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (cmbTipo.SelectedIndex >= 0 && String.IsNullOrEmpty(txtAlias.Text))
+            if (cmbTipo.SelectedIndex >= 0 && !String.IsNullOrEmpty(txtAlias.Text))
             {
                 Cuentas cuenta = Program.usuario.cuentas.Find(c => c.NoCuenta == txtNoCuenta.Text);
                 cuenta.ActualizarCuenta(cmbTipo.Text, txtAlias.Text);

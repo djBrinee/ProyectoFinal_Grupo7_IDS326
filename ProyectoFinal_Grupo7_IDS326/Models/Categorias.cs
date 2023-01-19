@@ -9,10 +9,12 @@ namespace ProyectoFinal_Grupo7_IDS326.Models
     public class Categorias
     {
         public string Nombre { get; set; }
+        public string Tipo { get; set; }
 
-        public Categorias(string nombre)
+        public Categorias(string nombre, string tipo)
         {
             this.Nombre = nombre;
+            this.Tipo = tipo;
         }
 
         public bool ActualizarCategoria(string nombre)

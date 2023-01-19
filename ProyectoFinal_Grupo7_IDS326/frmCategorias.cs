@@ -24,6 +24,7 @@ namespace ProyectoFinal_Grupo7_IDS326
         {
             pnlLateral.Visible = false;
             dt.Columns.Add("Nombre", typeof(string));
+            dt.Columns.Add("Tipo", typeof(string));
             CargarDatos();
         }
 
@@ -31,15 +32,16 @@ namespace ProyectoFinal_Grupo7_IDS326
         {
             pnlLateral.Visible = true;
             btnEditar.Visible = false;
+            cmbTipo.Enabled = true;
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtNombre.Text != "")
+                if (!String.IsNullOrEmpty(txtNombre.Text) && !String.IsNullOrEmpty(cmbTipo.SelectedItem.ToString()))
                 {
-                    Program.usuario.crearCategoria(txtNombre.Text);
+                    Program.usuario.crearCategoria(txtNombre.Text, cmbTipo.SelectedItem.ToString());
                     MessageBox.Show("Categoría creada correctamente", "Categoría creada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CargarDatos();
                     VaciarCampos();
@@ -77,7 +79,7 @@ namespace ProyectoFinal_Grupo7_IDS326
             {
                 foreach (var item in Program.usuario.categorias)
                 {
-                    string[] lst = {item.Nombre};
+                    string[] lst = {item.Nombre, item.Tipo};
                     dt.Rows.Add(lst);
                 }
             }
@@ -102,6 +104,7 @@ namespace ProyectoFinal_Grupo7_IDS326
                 pnlLateral.Visible = true;
                 btnCrear.Visible = false;
                 btnEditar.Visible = true;
+                cmbTipo.Enabled = false;
                 int index = dgvCategorias.CurrentCell.RowIndex;
                 DataGridViewRow dr = dgvCategorias.Rows[index];
                 txtNombre.Text = (string)dr.Cells[0].Value;

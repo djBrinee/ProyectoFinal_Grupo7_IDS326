@@ -52,6 +52,12 @@
     <Compile Include="frmCategorias.Designer.cs">
       <DependentUpon>frmCategorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTransacciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransacciones.Designer.cs">
+      <DependentUpon>frmTransacciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCuentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="Usuario.cs" />
     <EmbeddedResource Include="frmCategorias.resx">
       <DependentUpon>frmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransacciones.resx">
+      <DependentUpon>frmTransacciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCuentas.resx">
       <DependentUpon>frmCuentas.cs</DependentUpon>

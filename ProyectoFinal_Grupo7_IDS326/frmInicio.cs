@@ -48,5 +48,11 @@ namespace ProyectoFinal_Grupo7_IDS326
             frmCategorias frmCategoria = new frmCategorias();
             AbrirFormHijo(frmCategoria);
         }
+
+        private void btnTransacciones_Click(object sender, EventArgs e)
+        {
+            frmTransacciones frmTransacciones = new frmTransacciones();
+            AbrirFormHijo(frmTransacciones);
+        }
     }
 }

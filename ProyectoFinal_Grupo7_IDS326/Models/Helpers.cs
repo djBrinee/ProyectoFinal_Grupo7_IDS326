@@ -17,6 +17,9 @@ namespace ProyectoFinal_Grupo7_IDS326.Models
         {
             MessageBox.Show(ex.ToString(), "Ha ocurrido un problema", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
+        public static List<Categorias> filtrarCategorias(List<Categorias> categorias, string tipo)
+        {
+            return categorias.FindAll(c => c.Tipo == tipo);            
+        } 
     }
 }

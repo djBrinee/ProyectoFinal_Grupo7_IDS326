@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.pnlLateral = new System.Windows.Forms.Panel();
+            this.btnTransacciones = new System.Windows.Forms.Button();
+            this.btnCategorias = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnInicio = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnInicio = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnTransacciones = new System.Windows.Forms.Button();
-            this.btnCategorias = new System.Windows.Forms.Button();
             this.pnlLateral.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             this.pnlContenedor.SuspendLayout();
@@ -53,17 +53,73 @@
             this.pnlLateral.Controls.Add(this.pnlLogo);
             this.pnlLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLateral.Location = new System.Drawing.Point(0, 0);
-            this.pnlLateral.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlLateral.Margin = new System.Windows.Forms.Padding(2);
             this.pnlLateral.Name = "pnlLateral";
             this.pnlLateral.Size = new System.Drawing.Size(187, 480);
             this.pnlLateral.TabIndex = 9;
+            // 
+            // btnTransacciones
+            // 
+            this.btnTransacciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTransacciones.FlatAppearance.BorderSize = 0;
+            this.btnTransacciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransacciones.Location = new System.Drawing.Point(0, 224);
+            this.btnTransacciones.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTransacciones.Name = "btnTransacciones";
+            this.btnTransacciones.Size = new System.Drawing.Size(187, 37);
+            this.btnTransacciones.TabIndex = 16;
+            this.btnTransacciones.Text = "Transacciones";
+            this.btnTransacciones.UseVisualStyleBackColor = true;
+            this.btnTransacciones.Click += new System.EventHandler(this.btnTransacciones_Click);
+            // 
+            // btnCategorias
+            // 
+            this.btnCategorias.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCategorias.FlatAppearance.BorderSize = 0;
+            this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategorias.Location = new System.Drawing.Point(0, 187);
+            this.btnCategorias.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCategorias.Name = "btnCategorias";
+            this.btnCategorias.Size = new System.Drawing.Size(187, 37);
+            this.btnCategorias.TabIndex = 15;
+            this.btnCategorias.Text = "Categorías";
+            this.btnCategorias.UseVisualStyleBackColor = true;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(0, 150);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(187, 37);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Cuentas";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnCuentas_Click);
+            // 
+            // btnInicio
+            // 
+            this.btnInicio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInicio.FlatAppearance.BorderSize = 0;
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicio.Location = new System.Drawing.Point(0, 113);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(187, 37);
+            this.btnInicio.TabIndex = 11;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // pnlLogo
             // 
             this.pnlLogo.Controls.Add(this.label1);
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlLogo.Margin = new System.Windows.Forms.Padding(2);
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Size = new System.Drawing.Size(187, 113);
             this.pnlLogo.TabIndex = 11;
@@ -83,7 +139,7 @@
             this.pnlSuperior.BackColor = System.Drawing.Color.OldLace;
             this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSuperior.Location = new System.Drawing.Point(187, 0);
-            this.pnlSuperior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlSuperior.Margin = new System.Windows.Forms.Padding(2);
             this.pnlSuperior.Name = "pnlSuperior";
             this.pnlSuperior.Size = new System.Drawing.Size(745, 40);
             this.pnlSuperior.TabIndex = 11;
@@ -93,7 +149,7 @@
             this.pnlContenedor.Controls.Add(this.label2);
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(187, 40);
-            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(745, 440);
             this.pnlContenedor.TabIndex = 13;
@@ -108,61 +164,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Info Inicial";
             // 
-            // btnInicio
-            // 
-            this.btnInicio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInicio.FlatAppearance.BorderSize = 0;
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicio.Location = new System.Drawing.Point(0, 113);
-            this.btnInicio.Margin = new System.Windows.Forms.Padding(2);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(187, 37);
-            this.btnInicio.TabIndex = 11;
-            this.btnInicio.Text = "Inicio";
-            this.btnInicio.UseVisualStyleBackColor = true;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(0, 150);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 37);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Cuentas";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnCuentas_Click);
-            // 
-            // btnTransacciones
-            // 
-            this.btnTransacciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTransacciones.FlatAppearance.BorderSize = 0;
-            this.btnTransacciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransacciones.Location = new System.Drawing.Point(0, 224);
-            this.btnTransacciones.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTransacciones.Name = "btnTransacciones";
-            this.btnTransacciones.Size = new System.Drawing.Size(187, 37);
-            this.btnTransacciones.TabIndex = 16;
-            this.btnTransacciones.Text = "Transacciones";
-            this.btnTransacciones.UseVisualStyleBackColor = true;
-            // 
-            // btnCategorias
-            // 
-            this.btnCategorias.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCategorias.FlatAppearance.BorderSize = 0;
-            this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCategorias.Location = new System.Drawing.Point(0, 187);
-            this.btnCategorias.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCategorias.Name = "btnCategorias";
-            this.btnCategorias.Size = new System.Drawing.Size(187, 37);
-            this.btnCategorias.TabIndex = 15;
-            this.btnCategorias.Text = "Categorías";
-            this.btnCategorias.UseVisualStyleBackColor = true;
-            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
-            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,7 +172,7 @@
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.pnlSuperior);
             this.Controls.Add(this.pnlLateral);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmInicio";
             this.Text = "Form1";
             this.pnlLateral.ResumeLayout(false);
