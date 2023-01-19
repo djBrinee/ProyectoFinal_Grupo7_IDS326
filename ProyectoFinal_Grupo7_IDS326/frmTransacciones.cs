@@ -13,6 +13,8 @@ namespace ProyectoFinal_Grupo7_IDS326
 {
     public partial class frmTransacciones : Form
     {
+        IBuscadorTasas buscadorTasas = new BuscadorTasas();
+
         DataTable dt = new DataTable();
 
         public frmTransacciones()
@@ -44,6 +46,7 @@ namespace ProyectoFinal_Grupo7_IDS326
 
         private void btnCrearTransaccion_Click(object sender, EventArgs e)
         {
+            var sv = cmbMoneda.SelectedValue;
             pnlLateral.Visible = true;
             btnEditar.Visible = false;
             btnCrear.Visible = true;
@@ -56,7 +59,7 @@ namespace ProyectoFinal_Grupo7_IDS326
             cmbTipo.Enabled = true;
         }
 
-        private void btnCrear_Click(object sender, EventArgs e)
+        private async void btnCrear_Click(object sender, EventArgs e)
         {
             try
             {
@@ -64,7 +67,15 @@ namespace ProyectoFinal_Grupo7_IDS326
                 {
                     if(decimal.TryParse(txtMonto.Text,out decimal monto))
                     {
-                        Program.usuario.crearTransaccion(cmbTipo.SelectedItem.ToString(), cmbNoCuenta.SelectedItem.ToString(), cmbCategoria.SelectedItem.ToString(), monto, cmbMoneda.SelectedItem.ToString(), txtDescripcion.Text, dtpFechaTransaccion.Value);
+                        string moneda = cmbMoneda.SelectedItem.ToString();
+                        
+                        if (cmbMoneda.Text == "USD")
+                        {
+                            ConvertidorMoneda convertidor = new ConvertidorMoneda(buscadorTasas);
+                            monto = await convertidor.ConvertidorDolaresAPesos(monto);
+                            moneda = "DOP";
+                        }
+                        Program.usuario.crearTransaccion(cmbTipo.SelectedItem.ToString(), cmbNoCuenta.SelectedItem.ToString(), cmbCategoria.SelectedItem.ToString(), monto, moneda, txtDescripcion.Text, dtpFechaTransaccion.Value);
                         MessageBox.Show("Transacción creada correctamente", "Transacción creada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         CargarDatos();
                         VaciarCampos();
@@ -117,18 +128,25 @@ namespace ProyectoFinal_Grupo7_IDS326
                 MessageBox.Show("Debe seleccionar una transacción para editarla", "Seleccione una transacción", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
         }
-        private void btnEditar_Click(object sender, EventArgs e)
+        private async void btnEditar_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(dtpFechaTransaccion.Text) && !String.IsNullOrEmpty(txtMonto.Text) && !String.IsNullOrEmpty(cmbCategoria.Text) && !String.IsNullOrEmpty(cmbMoneda.Text) && !String.IsNullOrEmpty(txtDescripcion.Text))
             {
                 int index = dgvTransacciones.CurrentCell.RowIndex;
                 DataGridViewRow dr = dgvTransacciones.Rows[index];
                 Cuentas cuenta = Program.usuario.cuentas.Find(c => c.NoCuenta == (string)dr.Cells[2].Value);
-                Transacciones transaccion = cuenta.Transacciones.Find(c => c.NoCuenta == cuenta.NoCuenta);
-                if(Decimal.TryParse(txtMonto.Text, out decimal balance))
+                Transacciones transaccion = cuenta.Transacciones.Find(c => c.Id == (int)dr.Cells[0].Value);
+                if(Decimal.TryParse(txtMonto.Text, out decimal monto))
                 {
+                    string moneda = cmbMoneda.SelectedItem.ToString();
+                    if (cmbMoneda.Text == "USD")
+                    {
+                        ConvertidorMoneda convertidor = new ConvertidorMoneda(buscadorTasas);
+                        monto = await convertidor.ConvertidorDolaresAPesos(monto);
+                        moneda = "DOP";
+                    }
                     MessageBox.Show("Transacción editada correctamente", "Transacción editada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    transaccion.ActualizarTransaccion(cmbCategoria.Text, balance, cmbMoneda.Text, txtDescripcion.Text, dtpFechaTransaccion.Value, cuenta);
+                    transaccion.ActualizarTransaccion(cmbCategoria.Text, monto, moneda, txtDescripcion.Text, dtpFechaTransaccion.Value, cuenta);
                 }
                 else
                     MessageBox.Show("El monto debe ser un número.", "Monto no numerico", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -181,10 +199,14 @@ namespace ProyectoFinal_Grupo7_IDS326
 
         private void VaciarCampos()
         {
-            cmbNoCuenta.ResetText();
-            txtMonto.Text = "";
-            txtMonto.Text = "";
-            cmbTipo.ResetText();
+            cmbNoCuenta.SelectedItem = null;
+            cmbCategoria.SelectedItem = null;
+            // Estos dos continúan dando el error -->
+            cmbTipo.Text = ""; // --
+            cmbMoneda.Text= ""; // --
+            // <--
+            txtMonto.Clear();
+            txtDescripcion.Clear();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

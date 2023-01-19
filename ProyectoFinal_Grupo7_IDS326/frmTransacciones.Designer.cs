@@ -35,6 +35,15 @@
             this.btnEliminarCuenta = new System.Windows.Forms.PictureBox();
             this.btnCrearCuenta = new System.Windows.Forms.PictureBox();
             this.pnlLateral = new System.Windows.Forms.Panel();
+            this.dtpFechaTransaccion = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
+            this.cmbNoCuenta = new System.Windows.Forms.ComboBox();
+            this.cmbTipo = new System.Windows.Forms.ComboBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.cmbMoneda = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,15 +56,6 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvTransacciones = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cmbMoneda = new System.Windows.Forms.ComboBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.cmbTipo = new System.Windows.Forms.ComboBox();
-            this.cmbNoCuenta = new System.Windows.Forms.ComboBox();
-            this.cmbCategoria = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dtpFechaTransaccion = new System.Windows.Forms.DateTimePicker();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarCuenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarCuenta)).BeginInit();
@@ -67,10 +67,10 @@
             // 
             // btnTransaccion
             // 
-            this.btnTransaccion.Location = new System.Drawing.Point(441, 391);
-            this.btnTransaccion.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTransaccion.Location = new System.Drawing.Point(588, 481);
+            this.btnTransaccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTransaccion.Name = "btnTransaccion";
-            this.btnTransaccion.Size = new System.Drawing.Size(110, 19);
+            this.btnTransaccion.Size = new System.Drawing.Size(147, 23);
             this.btnTransaccion.TabIndex = 15;
             this.btnTransaccion.Text = "Crear transaccion";
             this.btnTransaccion.UseVisualStyleBackColor = true;
@@ -83,17 +83,18 @@
             this.pnlSuperior.Controls.Add(this.btnCrearCuenta);
             this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
-            this.pnlSuperior.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlSuperior.Name = "pnlSuperior";
-            this.pnlSuperior.Size = new System.Drawing.Size(729, 41);
+            this.pnlSuperior.Size = new System.Drawing.Size(972, 50);
             this.pnlSuperior.TabIndex = 20;
             // 
             // cmbCuentas
             // 
             this.cmbCuentas.FormattingEnabled = true;
-            this.cmbCuentas.Location = new System.Drawing.Point(12, 12);
+            this.cmbCuentas.Location = new System.Drawing.Point(16, 15);
+            this.cmbCuentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCuentas.Name = "cmbCuentas";
-            this.cmbCuentas.Size = new System.Drawing.Size(145, 21);
+            this.cmbCuentas.Size = new System.Drawing.Size(192, 24);
             this.cmbCuentas.TabIndex = 19;
             this.cmbCuentas.Text = "Seleccione una cuenta...";
             this.cmbCuentas.SelectedIndexChanged += new System.EventHandler(this.cmbCuentas_SelectedIndexChanged);
@@ -102,10 +103,10 @@
             // 
             this.btnEditarCuenta.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEditarCuenta.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.update;
-            this.btnEditarCuenta.Location = new System.Drawing.Point(617, 0);
-            this.btnEditarCuenta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditarCuenta.Location = new System.Drawing.Point(823, 0);
+            this.btnEditarCuenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditarCuenta.Name = "btnEditarCuenta";
-            this.btnEditarCuenta.Size = new System.Drawing.Size(37, 41);
+            this.btnEditarCuenta.Size = new System.Drawing.Size(49, 50);
             this.btnEditarCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnEditarCuenta.TabIndex = 18;
             this.btnEditarCuenta.TabStop = false;
@@ -115,10 +116,10 @@
             // 
             this.btnEliminarCuenta.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEliminarCuenta.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.delete;
-            this.btnEliminarCuenta.Location = new System.Drawing.Point(654, 0);
-            this.btnEliminarCuenta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminarCuenta.Location = new System.Drawing.Point(872, 0);
+            this.btnEliminarCuenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminarCuenta.Name = "btnEliminarCuenta";
-            this.btnEliminarCuenta.Size = new System.Drawing.Size(38, 41);
+            this.btnEliminarCuenta.Size = new System.Drawing.Size(51, 50);
             this.btnEliminarCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnEliminarCuenta.TabIndex = 16;
             this.btnEliminarCuenta.TabStop = false;
@@ -128,10 +129,10 @@
             // 
             this.btnCrearCuenta.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCrearCuenta.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.add;
-            this.btnCrearCuenta.Location = new System.Drawing.Point(692, 0);
-            this.btnCrearCuenta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCrearCuenta.Location = new System.Drawing.Point(923, 0);
+            this.btnCrearCuenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCrearCuenta.Name = "btnCrearCuenta";
-            this.btnCrearCuenta.Size = new System.Drawing.Size(37, 41);
+            this.btnCrearCuenta.Size = new System.Drawing.Size(49, 50);
             this.btnCrearCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCrearCuenta.TabIndex = 17;
             this.btnCrearCuenta.TabStop = false;
@@ -158,176 +159,51 @@
             this.pnlLateral.Controls.Add(this.label5);
             this.pnlLateral.Controls.Add(this.btnCrear);
             this.pnlLateral.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlLateral.Location = new System.Drawing.Point(463, 41);
-            this.pnlLateral.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlLateral.Location = new System.Drawing.Point(617, 50);
+            this.pnlLateral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlLateral.Name = "pnlLateral";
-            this.pnlLateral.Size = new System.Drawing.Size(266, 360);
+            this.pnlLateral.Size = new System.Drawing.Size(355, 444);
             this.pnlLateral.TabIndex = 21;
             // 
-            // btnCerrar
+            // dtpFechaTransaccion
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(155, 308);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(56, 19);
-            this.btnCerrar.TabIndex = 24;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.dtpFechaTransaccion.Location = new System.Drawing.Point(119, 330);
+            this.dtpFechaTransaccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaTransaccion.Name = "dtpFechaTransaccion";
+            this.dtpFechaTransaccion.Size = new System.Drawing.Size(217, 22);
+            this.dtpFechaTransaccion.TabIndex = 35;
             // 
-            // btnEditar
+            // label8
             // 
-            this.btnEditar.Location = new System.Drawing.Point(83, 308);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(56, 19);
-            this.btnEditar.TabIndex = 23;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(49, 330);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 20);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Fecha";
             // 
-            // label1
+            // cmbCategoria
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(58, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Transacciones";
+            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(121, 171);
+            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(217, 26);
+            this.cmbCategoria.TabIndex = 33;
             // 
-            // label2
+            // cmbNoCuenta
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 105);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "No. Cuenta";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(39, 174);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Monto";
-            // 
-            // txtMonto
-            // 
-            this.txtMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMonto.Location = new System.Drawing.Point(91, 172);
-            this.txtMonto.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMonto.Name = "txtMonto";
-            this.txtMonto.Size = new System.Drawing.Size(164, 21);
-            this.txtMonto.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(27, 205);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 17);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Moneda";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(5, 234);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 17);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Descripción";
-            // 
-            // btnCrear
-            // 
-            this.btnCrear.Location = new System.Drawing.Point(83, 308);
-            this.btnCrear.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(56, 19);
-            this.btnCrear.TabIndex = 9;
-            this.btnCrear.Text = "Crear";
-            this.btnCrear.UseVisualStyleBackColor = true;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dgvTransacciones);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 41);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(463, 360);
-            this.panel1.TabIndex = 24;
-            // 
-            // dgvTransacciones
-            // 
-            this.dgvTransacciones.AllowUserToAddRows = false;
-            this.dgvTransacciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTransacciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvTransacciones.Location = new System.Drawing.Point(0, 0);
-            this.dgvTransacciones.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvTransacciones.Name = "dgvTransacciones";
-            this.dgvTransacciones.RowHeadersWidth = 51;
-            this.dgvTransacciones.RowTemplate.Height = 24;
-            this.dgvTransacciones.Size = new System.Drawing.Size(463, 360);
-            this.dgvTransacciones.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(50, 72);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 17);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "Tipo";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(17, 141);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 17);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "Categoría";
-            // 
-            // cmbMoneda
-            // 
-            this.cmbMoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMoneda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMoneda.FormattingEnabled = true;
-            this.cmbMoneda.Items.AddRange(new object[] {
-            "DOP",
-            "USD"});
-            this.cmbMoneda.Location = new System.Drawing.Point(91, 203);
-            this.cmbMoneda.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbMoneda.Name = "cmbMoneda";
-            this.cmbMoneda.Size = new System.Drawing.Size(164, 23);
-            this.cmbMoneda.TabIndex = 29;
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(91, 234);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(164, 21);
-            this.txtDescripcion.TabIndex = 30;
+            this.cmbNoCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbNoCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNoCuenta.FormattingEnabled = true;
+            this.cmbNoCuenta.Location = new System.Drawing.Point(121, 129);
+            this.cmbNoCuenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbNoCuenta.Name = "cmbNoCuenta";
+            this.cmbNoCuenta.Size = new System.Drawing.Size(217, 26);
+            this.cmbNoCuenta.TabIndex = 32;
             // 
             // cmbTipo
             // 
@@ -337,66 +213,181 @@
             this.cmbTipo.Items.AddRange(new object[] {
             "Ingreso",
             "Gasto"});
-            this.cmbTipo.Location = new System.Drawing.Point(91, 72);
-            this.cmbTipo.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbTipo.Location = new System.Drawing.Point(121, 89);
+            this.cmbTipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(164, 23);
+            this.cmbTipo.Size = new System.Drawing.Size(217, 26);
             this.cmbTipo.TabIndex = 31;
             this.cmbTipo.SelectedIndexChanged += new System.EventHandler(this.cmbTipo_SelectedIndexChanged);
             // 
-            // cmbNoCuenta
+            // txtDescripcion
             // 
-            this.cmbNoCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbNoCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbNoCuenta.FormattingEnabled = true;
-            this.cmbNoCuenta.Location = new System.Drawing.Point(91, 105);
-            this.cmbNoCuenta.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbNoCuenta.Name = "cmbNoCuenta";
-            this.cmbNoCuenta.Size = new System.Drawing.Size(164, 23);
-            this.cmbNoCuenta.TabIndex = 32;
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(121, 288);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(217, 24);
+            this.txtDescripcion.TabIndex = 30;
             // 
-            // cmbCategoria
+            // cmbMoneda
             // 
-            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Items.AddRange(new object[] {
-            "Ingreso",
-            "Gasto"});
-            this.cmbCategoria.Location = new System.Drawing.Point(91, 139);
-            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(164, 23);
-            this.cmbCategoria.TabIndex = 33;
+            this.cmbMoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMoneda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMoneda.FormattingEnabled = true;
+            this.cmbMoneda.Items.AddRange(new object[] {
+            "DOP",
+            "USD"});
+            this.cmbMoneda.Location = new System.Drawing.Point(121, 250);
+            this.cmbMoneda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbMoneda.Name = "cmbMoneda";
+            this.cmbMoneda.Size = new System.Drawing.Size(217, 26);
+            this.cmbMoneda.TabIndex = 29;
             // 
-            // label8
+            // label7
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(37, 268);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 17);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "Fecha";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(23, 174);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(81, 20);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Categoría";
             // 
-            // dtpFechaTransaccion
+            // label6
             // 
-            this.dtpFechaTransaccion.Location = new System.Drawing.Point(89, 268);
-            this.dtpFechaTransaccion.Name = "dtpFechaTransaccion";
-            this.dtpFechaTransaccion.Size = new System.Drawing.Size(164, 20);
-            this.dtpFechaTransaccion.TabIndex = 35;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(67, 89);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 20);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "Tipo";
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Location = new System.Drawing.Point(207, 379);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCerrar.TabIndex = 24;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(111, 379);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 23;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(77, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(209, 36);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Transacciones";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 129);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "No. Cuenta";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(52, 214);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 20);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Monto";
+            // 
+            // txtMonto
+            // 
+            this.txtMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMonto.Location = new System.Drawing.Point(121, 212);
+            this.txtMonto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.Size = new System.Drawing.Size(217, 24);
+            this.txtMonto.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(36, 252);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 20);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Moneda";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(7, 288);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 20);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Descripción";
+            // 
+            // btnCrear
+            // 
+            this.btnCrear.Location = new System.Drawing.Point(111, 379);
+            this.btnCrear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(75, 23);
+            this.btnCrear.TabIndex = 9;
+            this.btnCrear.Text = "Crear";
+            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dgvTransacciones);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 50);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(617, 444);
+            this.panel1.TabIndex = 24;
+            // 
+            // dgvTransacciones
+            // 
+            this.dgvTransacciones.AllowUserToAddRows = false;
+            this.dgvTransacciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTransacciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTransacciones.Location = new System.Drawing.Point(0, 0);
+            this.dgvTransacciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvTransacciones.Name = "dgvTransacciones";
+            this.dgvTransacciones.RowHeadersWidth = 51;
+            this.dgvTransacciones.RowTemplate.Height = 24;
+            this.dgvTransacciones.Size = new System.Drawing.Size(617, 444);
+            this.dgvTransacciones.TabIndex = 0;
             // 
             // frmTransacciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 401);
+            this.ClientSize = new System.Drawing.Size(972, 494);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlLateral);
             this.Controls.Add(this.pnlSuperior);
             this.Controls.Add(this.btnTransaccion);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmTransacciones";
             this.Text = "Cuentas";
             this.Load += new System.EventHandler(this.frmTransacciones_Load);
