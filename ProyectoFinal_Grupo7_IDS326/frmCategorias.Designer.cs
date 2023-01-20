@@ -34,6 +34,8 @@
             this.btnEliminarCuenta = new System.Windows.Forms.PictureBox();
             this.btnCrearCuenta = new System.Windows.Forms.PictureBox();
             this.pnlLateral = new System.Windows.Forms.Panel();
+            this.cmbTipo = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,8 +45,6 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarCategoria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarCuenta)).BeginInit();
@@ -78,39 +78,42 @@
             // 
             // btnEditarCategoria
             // 
+            this.btnEditarCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditarCategoria.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEditarCategoria.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.update;
             this.btnEditarCategoria.Location = new System.Drawing.Point(617, 0);
             this.btnEditarCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditarCategoria.Name = "btnEditarCategoria";
             this.btnEditarCategoria.Size = new System.Drawing.Size(37, 41);
-            this.btnEditarCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnEditarCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEditarCategoria.TabIndex = 18;
             this.btnEditarCategoria.TabStop = false;
             this.btnEditarCategoria.Click += new System.EventHandler(this.btnEditarCategoria_Click);
             // 
             // btnEliminarCuenta
             // 
+            this.btnEliminarCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarCuenta.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEliminarCuenta.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.delete;
             this.btnEliminarCuenta.Location = new System.Drawing.Point(654, 0);
             this.btnEliminarCuenta.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminarCuenta.Name = "btnEliminarCuenta";
             this.btnEliminarCuenta.Size = new System.Drawing.Size(38, 41);
-            this.btnEliminarCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnEliminarCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEliminarCuenta.TabIndex = 16;
             this.btnEliminarCuenta.TabStop = false;
             this.btnEliminarCuenta.Click += new System.EventHandler(this.btnEliminarCategoria_Click);
             // 
             // btnCrearCuenta
             // 
+            this.btnCrearCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCrearCuenta.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCrearCuenta.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.add;
             this.btnCrearCuenta.Location = new System.Drawing.Point(692, 0);
             this.btnCrearCuenta.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrearCuenta.Name = "btnCrearCuenta";
             this.btnCrearCuenta.Size = new System.Drawing.Size(37, 41);
-            this.btnCrearCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnCrearCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCrearCuenta.TabIndex = 17;
             this.btnCrearCuenta.TabStop = false;
             this.btnCrearCuenta.Click += new System.EventHandler(this.btnCrearCategoria_Click);
@@ -131,6 +134,29 @@
             this.pnlLateral.Name = "pnlLateral";
             this.pnlLateral.Size = new System.Drawing.Size(266, 360);
             this.pnlLateral.TabIndex = 21;
+            // 
+            // cmbTipo
+            // 
+            this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.Items.AddRange(new object[] {
+            "Ingreso",
+            "Gasto"});
+            this.cmbTipo.Location = new System.Drawing.Point(96, 159);
+            this.cmbTipo.Name = "cmbTipo";
+            this.cmbTipo.Size = new System.Drawing.Size(164, 21);
+            this.cmbTipo.TabIndex = 27;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(52, 159);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 17);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Tipo";
             // 
             // btnCerrar
             // 
@@ -218,29 +244,6 @@
             this.dgvCategorias.RowTemplate.Height = 24;
             this.dgvCategorias.Size = new System.Drawing.Size(463, 360);
             this.dgvCategorias.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(52, 159);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 17);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Tipo";
-            // 
-            // cmbTipo
-            // 
-            this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Items.AddRange(new object[] {
-            "Ingreso",
-            "Gasto"});
-            this.cmbTipo.Location = new System.Drawing.Point(96, 159);
-            this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(164, 21);
-            this.cmbTipo.TabIndex = 27;
             // 
             // frmCategorias
             // 

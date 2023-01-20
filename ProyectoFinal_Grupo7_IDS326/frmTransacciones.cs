@@ -162,7 +162,7 @@ namespace ProyectoFinal_Grupo7_IDS326
         {
             if (dgvTransacciones.SelectedCells.Count > 0)
             {
-                DialogResult confirmacion = MessageBox.Show("¿Estás seguro que desea eliminar esta transacción?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult confirmacion = MessageBox.Show("¿Está seguro que desea eliminar esta transacción?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (confirmacion == DialogResult.Yes)
                 {

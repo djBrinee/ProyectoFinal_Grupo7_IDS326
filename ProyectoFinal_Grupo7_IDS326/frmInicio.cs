@@ -8,11 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoFinal_Grupo7_IDS326.Models;
+using System.Runtime.InteropServices;
 
 namespace ProyectoFinal_Grupo7_IDS326
 {
     public partial class frmInicio : Form
     {
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg,
+        int wparam, int lparam);
+
+
         public frmInicio()
         {
             InitializeComponent();
@@ -53,6 +61,25 @@ namespace ProyectoFinal_Grupo7_IDS326
         {
             frmTransacciones frmTransacciones = new frmTransacciones();
             AbrirFormHijo(frmTransacciones);
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            var confirmacion = MessageBox.Show("¿Está seguro de cerrar la aplicación? Se eliminarán todos los cambios no guardados.", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirmacion == DialogResult.Yes)
+                Application.Exit();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pnlSuperior_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
