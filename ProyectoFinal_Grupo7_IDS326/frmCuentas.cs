@@ -46,6 +46,7 @@ namespace ProyectoFinal_Grupo7_IDS326
                     if(decimal.TryParse(txtBalance.Text,out decimal balance))
                     {
                         Program.usuario.crearCuenta(txtNoCuenta.Text, txtAlias.Text, balance, cmbTipo.SelectedItem.ToString());
+                        
                         MessageBox.Show("Cuenta creada correctamente", "Cuenta creada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         CargarDatos();
                         VaciarCampos();

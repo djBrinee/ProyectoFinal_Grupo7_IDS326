@@ -39,11 +39,14 @@ namespace ProyectoFinal_Grupo7_IDS326.Models
         }
         public decimal calcularBalance()
         {
-            decimal balance = 0;
+            decimal balance = 0;    
+         
+            
+               
 
             foreach (Transacciones transaccion in Transacciones)
             {
-                if (transaccion.Tipo == "Ingreso")
+                if (transaccion.Tipo == "Ingreso" || transaccion.Tipo == "Inicial")
                 {
                     balance += transaccion.Monto;
                 }
