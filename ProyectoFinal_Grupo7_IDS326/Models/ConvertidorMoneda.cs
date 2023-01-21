@@ -28,8 +28,8 @@ namespace ProyectoFinal_Grupo7_IDS326
 
             // Filtrando lista, según criterios Entidad, MonedaOrigen y Destino, y tomando el 1er resultado
             var tasaVentaDolaresPopular = tasas.Where(x => x.Entidad == "Banco Popular"
-                                                     && x.MonedaOrigen == "DOP"
-                                                     && x.MonedaDestino == "USD").First();
+                                                     && x.MonedaOrigen == "USD"
+                                                     && x.MonedaDestino == "DOP").First();
 
             /* Debido a que todas las tasas están en DOP, para convertir de Pesos a Dólares se debe dividir,
              mientras que para convertir de Dólares a Pesos se debe multiplicar. Es decir:

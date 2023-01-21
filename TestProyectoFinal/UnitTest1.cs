@@ -68,14 +68,14 @@ namespace TestProyectoFinal
         public async void Probando_Calcular_Balance()
         {
             // ARRANGE
-            Cuentas cuentas = new Cuentas("123456789", "Cuenta de nomina", 0, "Corriente");
+            Cuentas sut = new Cuentas("123456789", "Cuenta de nomina", 0, "Corriente");
             Transacciones transaccion = new Transacciones(1, "Ingreso", "123456789", "Salario", 45000, "DOP", "Pago quincenal de nomina", DateTime.Now);
-            cuentas.Transacciones.Add(transaccion);
 
             // ACT
-            decimal balance = cuentas.calcularBalance();
+            sut.Transacciones.Add(transaccion);
 
             // ASSERT
+            decimal balance = sut.calcularBalance();
             Assert.Equal(45000, cuentas.Balance);
             Assert.Equal(45000, balance);
         }

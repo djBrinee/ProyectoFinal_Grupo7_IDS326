@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal_Grupo7_IDS326.Models
 {
-    class Helpers
+    class Helpers //static
     {
         public static void MessageBoxCamposVacios()
         {

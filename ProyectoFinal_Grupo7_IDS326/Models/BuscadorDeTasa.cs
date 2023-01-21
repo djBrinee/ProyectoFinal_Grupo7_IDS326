@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,7 +55,7 @@ namespace ProyectoFinal_Grupo7_IDS326
                 var bankName = i.Children[0].QuerySelector("span.nombre")?.TextContent.Trim() ?? "";
                 var buyPriceConSimbolo = i.Children[1].TextContent.Split('\n')[1].Trim();
                 var sellPriceConSimbolo = i.Children[2].TextContent.Split('\n')[1].Trim();
-                decimal buyPrice = buyPriceConSimbolo != "" ? Convert.ToDecimal(buyPriceConSimbolo.Replace("$", "")) : (decimal)0.00;
+                decimal buyPrice = buyPriceConSimbolo != "" ? Convert.ToDecimal(buyPriceConSimbolo.Replace("$", ""), CultureInfo.InvariantCulture) : (decimal)0.00;
                 decimal sellPrice = sellPriceConSimbolo != "" ? Convert.ToDecimal(sellPriceConSimbolo.Replace("$", "")) : (decimal)0.0;
                 tasas.Add(new Tasa(buyPrice, "USD", "DOP", bankName));
                 tasas.Add(new Tasa(sellPrice, "DOP", "USD", bankName));

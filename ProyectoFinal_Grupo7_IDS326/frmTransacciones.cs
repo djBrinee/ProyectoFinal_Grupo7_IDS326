@@ -73,6 +73,8 @@ namespace ProyectoFinal_Grupo7_IDS326
                         {
                             ConvertidorMoneda convertidor = new ConvertidorMoneda(buscadorTasas);
                             monto = await convertidor.ConvertidorDolaresAPesos(monto);
+                            //algo
+                            //await
                             moneda = "DOP";
                         }
                         Program.usuario.crearTransaccion(cmbTipo.SelectedItem.ToString(), cmbNoCuenta.SelectedItem.ToString(), cmbCategoria.SelectedItem.ToString(), monto, moneda, txtDescripcion.Text, dtpFechaTransaccion.Value);

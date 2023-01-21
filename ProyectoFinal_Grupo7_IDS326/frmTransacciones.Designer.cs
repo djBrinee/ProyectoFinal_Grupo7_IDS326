@@ -68,7 +68,7 @@
             // btnTransaccion
             // 
             this.btnTransaccion.Location = new System.Drawing.Point(441, 391);
-            this.btnTransaccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTransaccion.Margin = new System.Windows.Forms.Padding(2);
             this.btnTransaccion.Name = "btnTransaccion";
             this.btnTransaccion.Size = new System.Drawing.Size(110, 19);
             this.btnTransaccion.TabIndex = 15;
@@ -83,7 +83,7 @@
             this.pnlSuperior.Controls.Add(this.btnCrearCuenta);
             this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
-            this.pnlSuperior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlSuperior.Margin = new System.Windows.Forms.Padding(2);
             this.pnlSuperior.Name = "pnlSuperior";
             this.pnlSuperior.Size = new System.Drawing.Size(729, 41);
             this.pnlSuperior.TabIndex = 20;
@@ -103,7 +103,7 @@
             this.btnEditarCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditarCuenta.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.update;
             this.btnEditarCuenta.Location = new System.Drawing.Point(649, 0);
-            this.btnEditarCuenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditarCuenta.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditarCuenta.Name = "btnEditarCuenta";
             this.btnEditarCuenta.Size = new System.Drawing.Size(38, 41);
             this.btnEditarCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -116,7 +116,7 @@
             this.btnEliminarCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarCuenta.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.delete;
             this.btnEliminarCuenta.Location = new System.Drawing.Point(691, 0);
-            this.btnEliminarCuenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarCuenta.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminarCuenta.Name = "btnEliminarCuenta";
             this.btnEliminarCuenta.Size = new System.Drawing.Size(38, 41);
             this.btnEliminarCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -129,7 +129,7 @@
             this.btnCrearCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCrearCuenta.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.add;
             this.btnCrearCuenta.Location = new System.Drawing.Point(607, 0);
-            this.btnCrearCuenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCrearCuenta.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrearCuenta.Name = "btnCrearCuenta";
             this.btnCrearCuenta.Size = new System.Drawing.Size(38, 41);
             this.btnCrearCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -159,7 +159,7 @@
             this.pnlLateral.Controls.Add(this.btnCrear);
             this.pnlLateral.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlLateral.Location = new System.Drawing.Point(463, 41);
-            this.pnlLateral.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlLateral.Margin = new System.Windows.Forms.Padding(2);
             this.pnlLateral.Name = "pnlLateral";
             this.pnlLateral.Size = new System.Drawing.Size(266, 360);
             this.pnlLateral.TabIndex = 21;
@@ -189,7 +189,7 @@
             this.cmbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(91, 139);
-            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(164, 23);
             this.cmbCategoria.TabIndex = 33;
@@ -200,7 +200,7 @@
             this.cmbNoCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNoCuenta.FormattingEnabled = true;
             this.cmbNoCuenta.Location = new System.Drawing.Point(91, 105);
-            this.cmbNoCuenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbNoCuenta.Margin = new System.Windows.Forms.Padding(2);
             this.cmbNoCuenta.Name = "cmbNoCuenta";
             this.cmbNoCuenta.Size = new System.Drawing.Size(164, 23);
             this.cmbNoCuenta.TabIndex = 32;
@@ -214,7 +214,7 @@
             "Ingreso",
             "Gasto"});
             this.cmbTipo.Location = new System.Drawing.Point(91, 72);
-            this.cmbTipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTipo.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(164, 23);
             this.cmbTipo.TabIndex = 31;
@@ -224,7 +224,7 @@
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(91, 234);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(164, 21);
             this.txtDescripcion.TabIndex = 30;
@@ -238,7 +238,7 @@
             "DOP",
             "USD"});
             this.cmbMoneda.Location = new System.Drawing.Point(91, 203);
-            this.cmbMoneda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbMoneda.Margin = new System.Windows.Forms.Padding(2);
             this.cmbMoneda.Name = "cmbMoneda";
             this.cmbMoneda.Size = new System.Drawing.Size(164, 23);
             this.cmbMoneda.TabIndex = 29;
@@ -271,7 +271,7 @@
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Location = new System.Drawing.Point(157, 311);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(99, 29);
             this.btnCerrar.TabIndex = 24;
@@ -286,7 +286,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Location = new System.Drawing.Point(43, 311);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(99, 29);
             this.btnEditar.TabIndex = 23;
@@ -331,7 +331,7 @@
             // 
             this.txtMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMonto.Location = new System.Drawing.Point(91, 172);
-            this.txtMonto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMonto.Margin = new System.Windows.Forms.Padding(2);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(164, 21);
             this.txtMonto.TabIndex = 4;
@@ -363,8 +363,8 @@
             this.btnCrear.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCrear.FlatAppearance.BorderSize = 0;
             this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrear.Location = new System.Drawing.Point(13, 32);
-            this.btnCrear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCrear.Location = new System.Drawing.Point(43, 311);
+            this.btnCrear.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(99, 29);
             this.btnCrear.TabIndex = 9;
@@ -377,7 +377,7 @@
             this.panel1.Controls.Add(this.dgvTransacciones);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 41);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(463, 360);
             this.panel1.TabIndex = 24;
@@ -388,7 +388,7 @@
             this.dgvTransacciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTransacciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTransacciones.Location = new System.Drawing.Point(0, 0);
-            this.dgvTransacciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvTransacciones.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTransacciones.Name = "dgvTransacciones";
             this.dgvTransacciones.RowHeadersWidth = 51;
             this.dgvTransacciones.RowTemplate.Height = 24;
@@ -404,7 +404,7 @@
             this.Controls.Add(this.pnlLateral);
             this.Controls.Add(this.pnlSuperior);
             this.Controls.Add(this.btnTransaccion);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmTransacciones";
             this.Text = "Cuentas";
             this.Load += new System.EventHandler(this.frmTransacciones_Load);
