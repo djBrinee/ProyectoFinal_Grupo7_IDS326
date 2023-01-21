@@ -65,8 +65,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BuscadorDeTasa.cs" />
-    <Compile Include="ConvertidorMoneda.cs" />
+    <Compile Include="Models\BuscadorDeTasa.cs" />
+    <Compile Include="Models\ConvertidorMoneda.cs" />
     <Compile Include="frmCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
