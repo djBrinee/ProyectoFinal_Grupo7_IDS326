@@ -39,27 +39,6 @@ namespace TestProyectoFinal
             Assert.Equal(20 * tasaCorrecta, pesos, 2);
             Assert.Equal(1, ((StubBuscadorTasas)buscadorTasas).cantidadDeLlamadasParaObtenerTasas);
         }
-
-        //[Theory]
-        //[InlineData(300)]
-        //[InlineData(123)]
-        //[InlineData(456)]
-        //[InlineData(427)]
-        //[InlineData(564)]
-        //public void Probando_varias_compras_de_dolares_en_el_popular(float pesos)
-        //{
-        //    // ARRANGE
-        //    decimal tasaCorrecta = StubBuscadorTasas.TASA_DOP_USD_POPULAR;
-        //    IBuscadorTasas buscadorTasas = new StubBuscadorTasas();
-        //    ConvertidorMoneda sut = new ConvertidorMoneda(buscadorTasas);
-
-        //    // ACT
-        //    decimal dolares = await sut.ComprarDolaresEnElPopular(pesos);
-
-        //    // ASSERT
-        //    Assert.Equal(pesos / tasaCorrecta, dolares, 2);
-        //    Assert.Equal(1, ((StubBuscadorTasas)buscadorTasas).cantidadDeLlamadasParaObtenerTasas);
-        //}
     }
 
     public class TestingCuenta
@@ -119,7 +98,6 @@ namespace TestProyectoFinal
 
             // ACT & ASSERT 
             Assert.Throws <ArgumentException> (() => sut.crearCuenta("l644565", "Cuenta de nomina", 15000, "Corriente"));
-
         }
     }
 
