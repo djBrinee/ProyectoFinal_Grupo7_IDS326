@@ -26,8 +26,8 @@ namespace ProyectoFinal_Grupo7_IDS326
             pnlLateral.Visible = false;
             dt.Columns.Add("Id", typeof(int));
             dt.Columns.Add("Tipo", typeof(string));
-            dt.Columns.Add("NoCuenta", typeof(string));
-            dt.Columns.Add("Categoria", typeof(string));
+            dt.Columns.Add("No. Cuenta", typeof(string));
+            dt.Columns.Add("Categoría", typeof(string));
             dt.Columns.Add("Monto", typeof(decimal));
             dt.Columns.Add("Moneda", typeof(string));
             dt.Columns.Add("Descripción", typeof(string));
@@ -229,6 +229,11 @@ namespace ProyectoFinal_Grupo7_IDS326
             {
                 cmbCategoria.Items.Add(categoria.Nombre);
             }            
+        }
+
+        private void txtMonto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Helpers.SoloNumeros(sender, e);
         }
     }
 }

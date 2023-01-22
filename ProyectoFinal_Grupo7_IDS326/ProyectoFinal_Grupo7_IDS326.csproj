@@ -141,6 +141,10 @@
     <None Include="Resources\business-credit-report %281%291.png" />
     <None Include="Resources\close1.png" />
     <None Include="Resources\accounting.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\check1.png" />
+    <None Include="Resources\check2.png" />
+    <None Include="Resources\check3.png" />
     <Content Include="Resources\create.png" />
     <None Include="Resources\update1.png" />
     <None Include="Resources\create1.png" />
@@ -152,6 +156,7 @@
     <None Include="Resources\home1.png" />
     <None Include="Resources\list.png" />
     <None Include="Resources\money-exchange.png" />
+    <None Include="Resources\multiply.png" />
     <Content Include="Resources\update.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
