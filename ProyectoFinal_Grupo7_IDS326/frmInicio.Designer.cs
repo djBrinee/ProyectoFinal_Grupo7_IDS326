@@ -30,26 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.pnlLateral = new System.Windows.Forms.Panel();
-            this.pnlSuperior = new System.Windows.Forms.Panel();
-            this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnTransacciones = new System.Windows.Forms.Button();
             this.btnCategorias = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
+            this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblExpenseTracker = new System.Windows.Forms.Label();
             this.pnlLateral.SuspendLayout();
             this.pnlSuperior.SuspendLayout();
-            this.pnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            this.pnlContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLateral
             // 
             this.pnlLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
+            this.pnlLateral.Controls.Add(this.lblExpenseTracker);
             this.pnlLateral.Controls.Add(this.btnTransacciones);
             this.pnlLateral.Controls.Add(this.btnCategorias);
             this.pnlLateral.Controls.Add(this.button1);
@@ -61,6 +63,90 @@
             this.pnlLateral.Name = "pnlLateral";
             this.pnlLateral.Size = new System.Drawing.Size(187, 480);
             this.pnlLateral.TabIndex = 9;
+            // 
+            // btnTransacciones
+            // 
+            this.btnTransacciones.FlatAppearance.BorderSize = 0;
+            this.btnTransacciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            this.btnTransacciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransacciones.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransacciones.ForeColor = System.Drawing.Color.White;
+            this.btnTransacciones.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.money_exchange;
+            this.btnTransacciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTransacciones.Location = new System.Drawing.Point(0, 320);
+            this.btnTransacciones.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTransacciones.Name = "btnTransacciones";
+            this.btnTransacciones.Size = new System.Drawing.Size(187, 51);
+            this.btnTransacciones.TabIndex = 16;
+            this.btnTransacciones.Text = "Transacciones";
+            this.btnTransacciones.UseVisualStyleBackColor = true;
+            this.btnTransacciones.Click += new System.EventHandler(this.btnTransacciones_Click);
+            // 
+            // btnCategorias
+            // 
+            this.btnCategorias.FlatAppearance.BorderSize = 0;
+            this.btnCategorias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategorias.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategorias.ForeColor = System.Drawing.Color.White;
+            this.btnCategorias.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.list;
+            this.btnCategorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategorias.Location = new System.Drawing.Point(0, 266);
+            this.btnCategorias.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCategorias.Name = "btnCategorias";
+            this.btnCategorias.Size = new System.Drawing.Size(187, 51);
+            this.btnCategorias.TabIndex = 15;
+            this.btnCategorias.Text = "Categorías";
+            this.btnCategorias.UseVisualStyleBackColor = true;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.accounting;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 213);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(187, 51);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Cuentas";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnCuentas_Click);
+            // 
+            // btnInicio
+            // 
+            this.btnInicio.FlatAppearance.BorderSize = 0;
+            this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicio.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.ForeColor = System.Drawing.Color.White;
+            this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
+            this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInicio.Location = new System.Drawing.Point(0, 159);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(187, 51);
+            this.btnInicio.TabIndex = 11;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLogo.BackgroundImage")));
+            this.pnlLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlLogo.Location = new System.Drawing.Point(49, 11);
+            this.pnlLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(88, 82);
+            this.pnlLogo.TabIndex = 11;
+            this.pnlLogo.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // pnlSuperior
             // 
@@ -74,26 +160,6 @@
             this.pnlSuperior.Size = new System.Drawing.Size(745, 36);
             this.pnlSuperior.TabIndex = 11;
             this.pnlSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlSuperior_MouseDown);
-            // 
-            // pnlContenedor
-            // 
-            this.pnlContenedor.Controls.Add(this.label2);
-            this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenedor.Location = new System.Drawing.Point(187, 36);
-            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(745, 444);
-            this.pnlContenedor.TabIndex = 13;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(335, 203);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Info Inicial";
             // 
             // btnMinimizar
             // 
@@ -119,85 +185,38 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // btnTransacciones
+            // pnlContenedor
             // 
-            this.btnTransacciones.FlatAppearance.BorderSize = 0;
-            this.btnTransacciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransacciones.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransacciones.ForeColor = System.Drawing.Color.White;
-            this.btnTransacciones.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.money_exchange;
-            this.btnTransacciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTransacciones.Location = new System.Drawing.Point(-2, 284);
-            this.btnTransacciones.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTransacciones.Name = "btnTransacciones";
-            this.btnTransacciones.Size = new System.Drawing.Size(187, 37);
-            this.btnTransacciones.TabIndex = 16;
-            this.btnTransacciones.Text = "Transacciones";
-            this.btnTransacciones.UseVisualStyleBackColor = true;
-            this.btnTransacciones.Click += new System.EventHandler(this.btnTransacciones_Click);
+            this.pnlContenedor.BackColor = System.Drawing.Color.White;
+            this.pnlContenedor.Controls.Add(this.label2);
+            this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContenedor.Location = new System.Drawing.Point(187, 36);
+            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlContenedor.Name = "pnlContenedor";
+            this.pnlContenedor.Size = new System.Drawing.Size(745, 444);
+            this.pnlContenedor.TabIndex = 13;
             // 
-            // btnCategorias
+            // label2
             // 
-            this.btnCategorias.FlatAppearance.BorderSize = 0;
-            this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCategorias.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategorias.ForeColor = System.Drawing.Color.White;
-            this.btnCategorias.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.list;
-            this.btnCategorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategorias.Location = new System.Drawing.Point(-2, 247);
-            this.btnCategorias.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCategorias.Name = "btnCategorias";
-            this.btnCategorias.Size = new System.Drawing.Size(187, 37);
-            this.btnCategorias.TabIndex = 15;
-            this.btnCategorias.Text = "Categorías";
-            this.btnCategorias.UseVisualStyleBackColor = true;
-            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(351, 215);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Dashboard";
             // 
-            // button1
+            // lblExpenseTracker
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.accounting;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-2, 210);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 37);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Cuentas";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnCuentas_Click);
-            // 
-            // btnInicio
-            // 
-            this.btnInicio.FlatAppearance.BorderSize = 0;
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicio.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.ForeColor = System.Drawing.Color.White;
-            this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
-            this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.Location = new System.Drawing.Point(-2, 173);
-            this.btnInicio.Margin = new System.Windows.Forms.Padding(2);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(187, 37);
-            this.btnInicio.TabIndex = 11;
-            this.btnInicio.Text = "Inicio";
-            this.btnInicio.UseVisualStyleBackColor = true;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
-            // 
-            // pnlLogo
-            // 
-            this.pnlLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLogo.BackgroundImage")));
-            this.pnlLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnlLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlLogo.Location = new System.Drawing.Point(41, 11);
-            this.pnlLogo.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(88, 82);
-            this.pnlLogo.TabIndex = 11;
-            this.pnlLogo.Click += new System.EventHandler(this.btnInicio_Click);
+            this.lblExpenseTracker.AutoSize = true;
+            this.lblExpenseTracker.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpenseTracker.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblExpenseTracker.Location = new System.Drawing.Point(32, 107);
+            this.lblExpenseTracker.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblExpenseTracker.Name = "lblExpenseTracker";
+            this.lblExpenseTracker.Size = new System.Drawing.Size(123, 20);
+            this.lblExpenseTracker.TabIndex = 1;
+            this.lblExpenseTracker.Text = "Expense Tracker";
             // 
             // frmInicio
             // 
@@ -214,11 +233,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.pnlLateral.ResumeLayout(false);
+            this.pnlLateral.PerformLayout();
             this.pnlSuperior.ResumeLayout(false);
-            this.pnlContenedor.ResumeLayout(false);
-            this.pnlContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            this.pnlContenedor.ResumeLayout(false);
+            this.pnlContenedor.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -235,6 +255,7 @@
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMinimizar;
+        private System.Windows.Forms.Label lblExpenseTracker;
     }
 }
 
