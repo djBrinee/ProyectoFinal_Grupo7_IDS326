@@ -150,5 +150,10 @@ namespace ProyectoFinal_Grupo7_IDS326
                 MessageBox.Show("Debe seleccionar una cuenta para eliminarla", "Seleccione una cuenta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
         }
+
+        private void txtBalance_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Helpers.SoloNumeros(sender, e);
+        }
     }
 }
