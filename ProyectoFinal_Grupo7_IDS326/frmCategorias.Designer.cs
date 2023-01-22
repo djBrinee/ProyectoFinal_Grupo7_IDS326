@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnTransaccion = new System.Windows.Forms.Button();
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.btnEditarCategoria = new System.Windows.Forms.PictureBox();
@@ -79,9 +81,8 @@
             // btnEditarCategoria
             // 
             this.btnEditarCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarCategoria.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEditarCategoria.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.update;
-            this.btnEditarCategoria.Location = new System.Drawing.Point(617, 0);
+            this.btnEditarCategoria.Location = new System.Drawing.Point(654, 0);
             this.btnEditarCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditarCategoria.Name = "btnEditarCategoria";
             this.btnEditarCategoria.Size = new System.Drawing.Size(37, 41);
@@ -93,9 +94,8 @@
             // btnEliminarCuenta
             // 
             this.btnEliminarCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarCuenta.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEliminarCuenta.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.delete;
-            this.btnEliminarCuenta.Location = new System.Drawing.Point(654, 0);
+            this.btnEliminarCuenta.Location = new System.Drawing.Point(692, 0);
             this.btnEliminarCuenta.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminarCuenta.Name = "btnEliminarCuenta";
             this.btnEliminarCuenta.Size = new System.Drawing.Size(38, 41);
@@ -107,9 +107,8 @@
             // btnCrearCuenta
             // 
             this.btnCrearCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCrearCuenta.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCrearCuenta.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.add;
-            this.btnCrearCuenta.Location = new System.Drawing.Point(692, 0);
+            this.btnCrearCuenta.Location = new System.Drawing.Point(617, 0);
             this.btnCrearCuenta.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrearCuenta.Name = "btnCrearCuenta";
             this.btnCrearCuenta.Size = new System.Drawing.Size(37, 41);
@@ -138,88 +137,107 @@
             // cmbTipo
             // 
             this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipo.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Items.AddRange(new object[] {
             "Ingreso",
             "Gasto"});
             this.cmbTipo.Location = new System.Drawing.Point(96, 159);
             this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(164, 21);
+            this.cmbTipo.Size = new System.Drawing.Size(164, 24);
             this.cmbTipo.TabIndex = 27;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(52, 159);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 17);
+            this.label3.Size = new System.Drawing.Size(37, 20);
             this.label3.TabIndex = 25;
             this.label3.Text = "Tipo";
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(154, 191);
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.multiply;
+            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrar.Location = new System.Drawing.Point(154, 208);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(56, 19);
+            this.btnCerrar.Size = new System.Drawing.Size(99, 29);
             this.btnCerrar.TabIndex = 24;
             this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(82, 191);
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.check1;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(38, 208);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(56, 19);
+            this.btnEditar.Size = new System.Drawing.Size(99, 29);
             this.btnEditar.TabIndex = 23;
             this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(80, 63);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 29);
+            this.label1.Size = new System.Drawing.Size(140, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Categorías";
             // 
             // txtNombre
             // 
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(96, 122);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(164, 21);
+            this.txtNombre.Size = new System.Drawing.Size(164, 20);
             this.txtNombre.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(34, 124);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 17);
+            this.label2.Size = new System.Drawing.Size(62, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(82, 191);
+            this.btnCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            this.btnCrear.FlatAppearance.BorderSize = 0;
+            this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrear.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrear.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.check1;
+            this.btnCrear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCrear.Location = new System.Drawing.Point(38, 208);
             this.btnCrear.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(56, 19);
+            this.btnCrear.Size = new System.Drawing.Size(99, 29);
             this.btnCrear.TabIndex = 9;
             this.btnCrear.Text = "Crear";
-            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.UseVisualStyleBackColor = false;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // panel1
@@ -235,15 +253,36 @@
             // dgvCategorias
             // 
             this.dgvCategorias.AllowUserToAddRows = false;
+            this.dgvCategorias.BackgroundColor = System.Drawing.Color.White;
+            this.dgvCategorias.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCategorias.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dgvCategorias.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCategorias.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCategorias.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCategorias.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
             this.dgvCategorias.Location = new System.Drawing.Point(0, 0);
             this.dgvCategorias.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCategorias.Name = "dgvCategorias";
             this.dgvCategorias.RowHeadersWidth = 51;
             this.dgvCategorias.RowTemplate.Height = 24;
             this.dgvCategorias.Size = new System.Drawing.Size(463, 360);
-            this.dgvCategorias.TabIndex = 0;
+            this.dgvCategorias.TabIndex = 1;
             // 
             // frmCategorias
             // 
@@ -284,9 +323,9 @@
         private System.Windows.Forms.Button btnEditar;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgvCategorias;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dgvCategorias;
     }
 }

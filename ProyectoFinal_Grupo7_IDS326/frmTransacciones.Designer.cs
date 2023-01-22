@@ -154,29 +154,29 @@
             // cmbCategoria
             // 
             this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCategoria.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(91, 135);
             this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(164, 23);
+            this.cmbCategoria.Size = new System.Drawing.Size(164, 26);
             this.cmbCategoria.TabIndex = 33;
             // 
             // cmbNoCuenta
             // 
             this.cmbNoCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbNoCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNoCuenta.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNoCuenta.FormattingEnabled = true;
             this.cmbNoCuenta.Location = new System.Drawing.Point(91, 103);
             this.cmbNoCuenta.Margin = new System.Windows.Forms.Padding(2);
             this.cmbNoCuenta.Name = "cmbNoCuenta";
-            this.cmbNoCuenta.Size = new System.Drawing.Size(164, 23);
+            this.cmbNoCuenta.Size = new System.Drawing.Size(164, 26);
             this.cmbNoCuenta.TabIndex = 32;
             // 
             // cmbTipo
             // 
             this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTipo.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Items.AddRange(new object[] {
             "Ingreso",
@@ -184,13 +184,13 @@
             this.cmbTipo.Location = new System.Drawing.Point(91, 71);
             this.cmbTipo.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(164, 23);
+            this.cmbTipo.Size = new System.Drawing.Size(164, 26);
             this.cmbTipo.TabIndex = 31;
             this.cmbTipo.SelectedIndexChanged += new System.EventHandler(this.cmbTipo_SelectedIndexChanged);
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(91, 234);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Name = "txtDescripcion";
@@ -200,7 +200,7 @@
             // cmbMoneda
             // 
             this.cmbMoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMoneda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMoneda.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMoneda.FormattingEnabled = true;
             this.cmbMoneda.Items.AddRange(new object[] {
             "DOP",
@@ -208,7 +208,7 @@
             this.cmbMoneda.Location = new System.Drawing.Point(91, 199);
             this.cmbMoneda.Margin = new System.Windows.Forms.Padding(2);
             this.cmbMoneda.Name = "cmbMoneda";
-            this.cmbMoneda.Size = new System.Drawing.Size(164, 23);
+            this.cmbMoneda.Size = new System.Drawing.Size(164, 26);
             this.cmbMoneda.TabIndex = 29;
             // 
             // label7
@@ -268,7 +268,7 @@
             // 
             // txtMonto
             // 
-            this.txtMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMonto.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMonto.Location = new System.Drawing.Point(91, 168);
             this.txtMonto.Margin = new System.Windows.Forms.Padding(2);
             this.txtMonto.MaxLength = 33;
