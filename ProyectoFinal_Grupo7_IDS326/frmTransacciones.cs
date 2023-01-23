@@ -72,9 +72,12 @@ namespace ProyectoFinal_Grupo7_IDS326
                         if (cmbMoneda.Text == "USD")
                         {
                             ConvertidorMoneda convertidor = new ConvertidorMoneda(buscadorTasas);
-                            monto = await convertidor.ConvertidorDolaresAPesos(monto);
-                            //algo
-                            //await
+                            Task<decimal> task = convertidor.ConvertidorDolaresAPesos(monto);
+                            progressBar1.Visible = true;
+                            progressBar1.MarqueeAnimationSpeed = 30;
+                            monto = await task;
+                            progressBar1.Visible = false;
+                            progressBar1.MarqueeAnimationSpeed = 0;
                             moneda = "DOP";
                         }
                         Cuentas cuenta = Program.usuario.cuentas.Find(c => c.NoCuenta == cmbNoCuenta.SelectedItem.ToString());

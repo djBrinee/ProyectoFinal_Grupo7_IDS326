@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTransacciones));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnTransaccion = new System.Windows.Forms.Button();
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.cmbCuentas = new System.Windows.Forms.ComboBox();
+            this.btnEditarCuenta = new System.Windows.Forms.PictureBox();
+            this.btnEliminarCuenta = new System.Windows.Forms.PictureBox();
+            this.btnCrearCuenta = new System.Windows.Forms.PictureBox();
             this.pnlLateral = new System.Windows.Forms.Panel();
+            this.btnCrear = new System.Windows.Forms.Button();
             this.dtpFechaTransaccion = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
@@ -44,28 +48,25 @@
             this.cmbMoneda = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMonto = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvTransacciones = new System.Windows.Forms.DataGridView();
-            this.btnCrear = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnEditarCuenta = new System.Windows.Forms.PictureBox();
-            this.btnEliminarCuenta = new System.Windows.Forms.PictureBox();
-            this.btnCrearCuenta = new System.Windows.Forms.PictureBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.pnlSuperior.SuspendLayout();
-            this.pnlLateral.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransacciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarCuenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarCuenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCrearCuenta)).BeginInit();
+            this.pnlLateral.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransacciones)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTransaccion
@@ -103,9 +104,49 @@
             this.cmbCuentas.Text = "Seleccione una cuenta...";
             this.cmbCuentas.SelectedIndexChanged += new System.EventHandler(this.cmbCuentas_SelectedIndexChanged);
             // 
+            // btnEditarCuenta
+            // 
+            this.btnEditarCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditarCuenta.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.update;
+            this.btnEditarCuenta.Location = new System.Drawing.Point(649, 0);
+            this.btnEditarCuenta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditarCuenta.Name = "btnEditarCuenta";
+            this.btnEditarCuenta.Size = new System.Drawing.Size(38, 41);
+            this.btnEditarCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEditarCuenta.TabIndex = 18;
+            this.btnEditarCuenta.TabStop = false;
+            this.btnEditarCuenta.Click += new System.EventHandler(this.btnEditarTransaccion_Click);
+            // 
+            // btnEliminarCuenta
+            // 
+            this.btnEliminarCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarCuenta.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.delete;
+            this.btnEliminarCuenta.Location = new System.Drawing.Point(691, 0);
+            this.btnEliminarCuenta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminarCuenta.Name = "btnEliminarCuenta";
+            this.btnEliminarCuenta.Size = new System.Drawing.Size(38, 41);
+            this.btnEliminarCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEliminarCuenta.TabIndex = 16;
+            this.btnEliminarCuenta.TabStop = false;
+            this.btnEliminarCuenta.Click += new System.EventHandler(this.btnEliminarTransaccion_Click);
+            // 
+            // btnCrearCuenta
+            // 
+            this.btnCrearCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCrearCuenta.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.add;
+            this.btnCrearCuenta.Location = new System.Drawing.Point(607, 0);
+            this.btnCrearCuenta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCrearCuenta.Name = "btnCrearCuenta";
+            this.btnCrearCuenta.Size = new System.Drawing.Size(38, 41);
+            this.btnCrearCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCrearCuenta.TabIndex = 17;
+            this.btnCrearCuenta.TabStop = false;
+            this.btnCrearCuenta.Click += new System.EventHandler(this.btnCrearTransaccion_Click);
+            // 
             // pnlLateral
             // 
             this.pnlLateral.BackColor = System.Drawing.Color.White;
+            this.pnlLateral.Controls.Add(this.progressBar1);
             this.pnlLateral.Controls.Add(this.btnCrear);
             this.pnlLateral.Controls.Add(this.dtpFechaTransaccion);
             this.pnlLateral.Controls.Add(this.label8);
@@ -130,6 +171,23 @@
             this.pnlLateral.Name = "pnlLateral";
             this.pnlLateral.Size = new System.Drawing.Size(266, 360);
             this.pnlLateral.TabIndex = 21;
+            // 
+            // btnCrear
+            // 
+            this.btnCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            this.btnCrear.FlatAppearance.BorderSize = 0;
+            this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrear.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.btnCrear.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.check1;
+            this.btnCrear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCrear.Location = new System.Drawing.Point(43, 311);
+            this.btnCrear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(99, 29);
+            this.btnCrear.TabIndex = 9;
+            this.btnCrear.Text = "Crear";
+            this.btnCrear.UseVisualStyleBackColor = false;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // dtpFechaTransaccion
             // 
@@ -233,6 +291,23 @@
             this.label6.TabIndex = 25;
             this.label6.Text = "Tipo";
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.btnCerrar.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.multiply;
+            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrar.Location = new System.Drawing.Point(157, 311);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(99, 29);
+            this.btnCerrar.TabIndex = 24;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -299,84 +374,6 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Descripción";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dgvTransacciones);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 41);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(463, 360);
-            this.panel1.TabIndex = 24;
-            // 
-            // dgvTransacciones
-            // 
-            this.dgvTransacciones.AllowUserToAddRows = false;
-            this.dgvTransacciones.BackgroundColor = System.Drawing.Color.White;
-            this.dgvTransacciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvTransacciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.dgvTransacciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTransacciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvTransacciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTransacciones.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvTransacciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvTransacciones.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
-            this.dgvTransacciones.Location = new System.Drawing.Point(0, 0);
-            this.dgvTransacciones.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvTransacciones.Name = "dgvTransacciones";
-            this.dgvTransacciones.RowHeadersWidth = 51;
-            this.dgvTransacciones.RowTemplate.Height = 24;
-            this.dgvTransacciones.Size = new System.Drawing.Size(463, 360);
-            this.dgvTransacciones.TabIndex = 0;
-            // 
-            // btnCrear
-            // 
-            this.btnCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
-            this.btnCrear.FlatAppearance.BorderSize = 0;
-            this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrear.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.btnCrear.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.check1;
-            this.btnCrear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCrear.Location = new System.Drawing.Point(43, 311);
-            this.btnCrear.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(99, 29);
-            this.btnCrear.TabIndex = 9;
-            this.btnCrear.Text = "Crear";
-            this.btnCrear.UseVisualStyleBackColor = false;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.btnCerrar.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.multiply;
-            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(157, 311);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(99, 29);
-            this.btnCerrar.TabIndex = 24;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
@@ -394,44 +391,59 @@
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // btnEditarCuenta
+            // panel1
             // 
-            this.btnEditarCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarCuenta.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.update;
-            this.btnEditarCuenta.Location = new System.Drawing.Point(649, 0);
-            this.btnEditarCuenta.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditarCuenta.Name = "btnEditarCuenta";
-            this.btnEditarCuenta.Size = new System.Drawing.Size(38, 41);
-            this.btnEditarCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnEditarCuenta.TabIndex = 18;
-            this.btnEditarCuenta.TabStop = false;
-            this.btnEditarCuenta.Click += new System.EventHandler(this.btnEditarTransaccion_Click);
+            this.panel1.Controls.Add(this.dgvTransacciones);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 41);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(463, 360);
+            this.panel1.TabIndex = 24;
             // 
-            // btnEliminarCuenta
+            // dgvTransacciones
             // 
-            this.btnEliminarCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarCuenta.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.delete;
-            this.btnEliminarCuenta.Location = new System.Drawing.Point(691, 0);
-            this.btnEliminarCuenta.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEliminarCuenta.Name = "btnEliminarCuenta";
-            this.btnEliminarCuenta.Size = new System.Drawing.Size(38, 41);
-            this.btnEliminarCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnEliminarCuenta.TabIndex = 16;
-            this.btnEliminarCuenta.TabStop = false;
-            this.btnEliminarCuenta.Click += new System.EventHandler(this.btnEliminarTransaccion_Click);
+            this.dgvTransacciones.AllowUserToAddRows = false;
+            this.dgvTransacciones.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTransacciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvTransacciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dgvTransacciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTransacciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvTransacciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTransacciones.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvTransacciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTransacciones.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
+            this.dgvTransacciones.Location = new System.Drawing.Point(0, 0);
+            this.dgvTransacciones.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvTransacciones.Name = "dgvTransacciones";
+            this.dgvTransacciones.RowHeadersWidth = 51;
+            this.dgvTransacciones.RowTemplate.Height = 24;
+            this.dgvTransacciones.Size = new System.Drawing.Size(463, 360);
+            this.dgvTransacciones.TabIndex = 0;
             // 
-            // btnCrearCuenta
+            // progressBar1
             // 
-            this.btnCrearCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCrearCuenta.Image = global::ProyectoFinal_Grupo7_IDS326.Properties.Resources.add;
-            this.btnCrearCuenta.Location = new System.Drawing.Point(607, 0);
-            this.btnCrearCuenta.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCrearCuenta.Name = "btnCrearCuenta";
-            this.btnCrearCuenta.Size = new System.Drawing.Size(38, 41);
-            this.btnCrearCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCrearCuenta.TabIndex = 17;
-            this.btnCrearCuenta.TabStop = false;
-            this.btnCrearCuenta.Click += new System.EventHandler(this.btnCrearTransaccion_Click);
+            this.progressBar1.Enabled = false;
+            this.progressBar1.Location = new System.Drawing.Point(93, 346);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.progressBar1.TabIndex = 1;
+            this.progressBar1.Visible = false;
             // 
             // frmTransacciones
             // 
@@ -447,13 +459,13 @@
             this.Text = "Cuentas";
             this.Load += new System.EventHandler(this.frmTransacciones_Load);
             this.pnlSuperior.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditarCuenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminarCuenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCrearCuenta)).EndInit();
             this.pnlLateral.ResumeLayout(false);
             this.pnlLateral.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransacciones)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditarCuenta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEliminarCuenta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCrearCuenta)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -487,5 +499,6 @@
         private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.DateTimePicker dtpFechaTransaccion;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
