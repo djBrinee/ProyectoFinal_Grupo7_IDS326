@@ -39,6 +39,24 @@ namespace TestProyectoFinal
             Assert.Equal(20 * tasaCorrecta, pesos, 2);
             Assert.Equal(1, ((StubBuscadorTasas)buscadorTasas).cantidadDeLlamadasParaObtenerTasas);
         }
+
+        [Fact]
+        public async void Probando_conversion_de_peso_a_dolar()
+        {
+            // ARRANGE
+            decimal tasaCorrecta = StubBuscadorTasas.TASA_USD_DOP_POPULAR;
+            IBuscadorTasas buscadorTasas = new StubBuscadorTasas();
+            ConvertidorMoneda sut = new ConvertidorMoneda(buscadorTasas);
+
+            // ACT
+            Transacciones transaccionInicial = new Transacciones(1, "Ingreso", "23145", "Pago Trabajo", 250, "DOP", "Pago de salario trabajo", DateTime.Now);
+            Transacciones transaccionRespuesta = await sut.ConvertidorTransaccionesPesosADolares(transaccionInicial);
+
+            // ASSERT
+            Assert.Equal(transaccionRespuesta.Moneda, "USD");
+            Assert.Equal(transaccionInicial.Monto / tasaCorrecta, transaccionRespuesta.Monto, 2);
+            Assert.Equal(1, ((StubBuscadorTasas)buscadorTasas).cantidadDeLlamadasParaObtenerTasas);
+        }
     }
 
     public class TestingCuenta
