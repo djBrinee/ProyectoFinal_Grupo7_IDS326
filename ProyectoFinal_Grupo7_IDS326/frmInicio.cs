@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoFinal_Grupo7_IDS326.Models;
 using System.Runtime.InteropServices;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace ProyectoFinal_Grupo7_IDS326
 {
@@ -50,6 +51,9 @@ namespace ProyectoFinal_Grupo7_IDS326
         {
             if (formActivo != null)
                 formActivo.Close();
+            object senderObj = new object();
+            EventArgs eventObj = new EventArgs();
+            frmInicio_Load(senderObj, eventObj);
         }
         private void btnCategorias_Click(object sender, EventArgs e)
         {
@@ -80,6 +84,27 @@ namespace ProyectoFinal_Grupo7_IDS326
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void frmInicio_Load(object sender, EventArgs e)
+        {
+            var cuentas = Program.usuario.cuentas.ToDictionary(keySelector: m => m.Alias, elementSelector: m => m.Balance);
+            percentageChart.Series[0].ChartType = SeriesChartType.Doughnut;
+            percentageChart.Series[0].Points.DataBindXY(cuentas.Keys, cuentas.Values);
+            percentageChart.Legends[0].Enabled = true;            
+            percentageChart.Legends[0].Alignment = StringAlignment.Center;            
+            balanceChart.Series[0].ChartType = SeriesChartType.Bar;
+            balanceChart.Series[0].Points.DataBindXY(cuentas.Keys, cuentas.Values);
+            balanceChart.Legends[0].Enabled = false;
+
+
+
+        }
+
+        private void btnTransaccionesDolar_Click(object sender, EventArgs e)
+        {
+            frmDolares frmDolares = new frmDolares();
+            AbrirFormHijo(frmDolares);
         }
     }
 }

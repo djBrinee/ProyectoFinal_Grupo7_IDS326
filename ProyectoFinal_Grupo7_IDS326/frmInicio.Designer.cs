@@ -29,7 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.pnlLateral = new System.Windows.Forms.Panel();
+            this.lblExpenseTracker = new System.Windows.Forms.Label();
             this.btnTransacciones = new System.Windows.Forms.Button();
             this.btnCategorias = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -39,13 +48,17 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.btnTransaccionesDolar = new System.Windows.Forms.Button();
+            this.balanceChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.percentageChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblExpenseTracker = new System.Windows.Forms.Label();
             this.pnlLateral.SuspendLayout();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.pnlContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.balanceChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.percentageChart)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlLateral
@@ -63,6 +76,18 @@
             this.pnlLateral.Name = "pnlLateral";
             this.pnlLateral.Size = new System.Drawing.Size(187, 480);
             this.pnlLateral.TabIndex = 9;
+            // 
+            // lblExpenseTracker
+            // 
+            this.lblExpenseTracker.AutoSize = true;
+            this.lblExpenseTracker.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpenseTracker.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblExpenseTracker.Location = new System.Drawing.Point(32, 107);
+            this.lblExpenseTracker.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblExpenseTracker.Name = "lblExpenseTracker";
+            this.lblExpenseTracker.Size = new System.Drawing.Size(123, 20);
+            this.lblExpenseTracker.TabIndex = 1;
+            this.lblExpenseTracker.Text = "Expense Tracker";
             // 
             // btnTransacciones
             // 
@@ -188,6 +213,9 @@
             // pnlContenedor
             // 
             this.pnlContenedor.BackColor = System.Drawing.Color.White;
+            this.pnlContenedor.Controls.Add(this.btnTransaccionesDolar);
+            this.pnlContenedor.Controls.Add(this.balanceChart);
+            this.pnlContenedor.Controls.Add(this.percentageChart);
             this.pnlContenedor.Controls.Add(this.label2);
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(187, 36);
@@ -196,27 +224,78 @@
             this.pnlContenedor.Size = new System.Drawing.Size(745, 444);
             this.pnlContenedor.TabIndex = 13;
             // 
+            // btnTransaccionesDolar
+            // 
+            this.btnTransaccionesDolar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            this.btnTransaccionesDolar.FlatAppearance.BorderSize = 0;
+            this.btnTransaccionesDolar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransaccionesDolar.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.btnTransaccionesDolar.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnTransaccionesDolar.Location = new System.Drawing.Point(216, 404);
+            this.btnTransaccionesDolar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTransaccionesDolar.Name = "btnTransaccionesDolar";
+            this.btnTransaccionesDolar.Size = new System.Drawing.Size(317, 29);
+            this.btnTransaccionesDolar.TabIndex = 10;
+            this.btnTransaccionesDolar.Text = "Ver transacciones en dolares";
+            this.btnTransaccionesDolar.UseVisualStyleBackColor = false;
+            this.btnTransaccionesDolar.Click += new System.EventHandler(this.btnTransaccionesDolar_Click);
+            // 
+            // balanceChart
+            // 
+            this.balanceChart.BorderlineColor = System.Drawing.Color.Black;
+            this.balanceChart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            this.balanceChart.BorderlineWidth = 2;
+            chartArea3.Name = "ChartArea1";
+            this.balanceChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.balanceChart.Legends.Add(legend3);
+            this.balanceChart.Location = new System.Drawing.Point(27, 84);
+            this.balanceChart.Name = "balanceChart";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.balanceChart.Series.Add(series3);
+            this.balanceChart.Size = new System.Drawing.Size(330, 300);
+            this.balanceChart.TabIndex = 2;
+            this.balanceChart.Text = "Resumen de cuentas";
+            title3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title3.Name = "Title1";
+            title3.Text = "Resumen de balances";
+            this.balanceChart.Titles.Add(title3);
+            // 
+            // percentageChart
+            // 
+            this.percentageChart.BorderlineColor = System.Drawing.Color.Black;
+            this.percentageChart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            this.percentageChart.BorderlineWidth = 2;
+            chartArea4.Name = "ChartArea1";
+            this.percentageChart.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.percentageChart.Legends.Add(legend4);
+            this.percentageChart.Location = new System.Drawing.Point(406, 84);
+            this.percentageChart.Name = "percentageChart";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.percentageChart.Series.Add(series4);
+            this.percentageChart.Size = new System.Drawing.Size(300, 300);
+            this.percentageChart.TabIndex = 1;
+            this.percentageChart.Text = "Resumen de cuentas";
+            title4.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title4.Name = "Title1";
+            title4.Text = "Porcentaje en base a cuentas";
+            this.percentageChart.Titles.Add(title4);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(351, 215);
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(22, 28);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.Size = new System.Drawing.Size(130, 29);
             this.label2.TabIndex = 0;
             this.label2.Text = "Dashboard";
-            // 
-            // lblExpenseTracker
-            // 
-            this.lblExpenseTracker.AutoSize = true;
-            this.lblExpenseTracker.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExpenseTracker.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblExpenseTracker.Location = new System.Drawing.Point(32, 107);
-            this.lblExpenseTracker.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblExpenseTracker.Name = "lblExpenseTracker";
-            this.lblExpenseTracker.Size = new System.Drawing.Size(123, 20);
-            this.lblExpenseTracker.TabIndex = 1;
-            this.lblExpenseTracker.Text = "Expense Tracker";
             // 
             // frmInicio
             // 
@@ -232,6 +311,7 @@
             this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmInicio_Load);
             this.pnlLateral.ResumeLayout(false);
             this.pnlLateral.PerformLayout();
             this.pnlSuperior.ResumeLayout(false);
@@ -239,6 +319,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.pnlContenedor.ResumeLayout(false);
             this.pnlContenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.balanceChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.percentageChart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -256,6 +338,9 @@
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.Label lblExpenseTracker;
+        private System.Windows.Forms.DataVisualization.Charting.Chart percentageChart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart balanceChart;
+        private System.Windows.Forms.Button btnTransaccionesDolar;
     }
 }
 

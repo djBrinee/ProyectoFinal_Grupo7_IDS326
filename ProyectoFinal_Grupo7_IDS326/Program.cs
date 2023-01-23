@@ -15,11 +15,12 @@ namespace ProyectoFinal_Grupo7_IDS326
         [STAThread]
         static void Main()
         {
-            Cuentas cuenta = usuario.crearCuenta("4023145535", "Popular", 14500, "Ahorro");
             usuario.crearCategoria("Servicios", "Gasto");
             usuario.crearCategoria("Salario", "Ingreso");
+            Cuentas cuenta = usuario.crearCuenta("4023145535", "Popular", 14500, "Ahorro"); //Cuenta ejemplo 1            
             usuario.crearTransaccion("Ingreso", cuenta, "Salario", 15000, "DOP", "Quincena", DateTime.Now);
-            usuario.crearTransaccion("Gasto", cuenta, "Servicios", 500, "DOP", "Gasto de energía",DateTime.Now);
+            usuario.crearTransaccion("Gasto", cuenta, "Servicios", 500, "DOP", "Gasto de energía",DateTime.Now); //Cuenta ejemplo 2
+            usuario.crearCuenta("4023145535", "Personal", 38000, "Ahorro");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmInicio());
