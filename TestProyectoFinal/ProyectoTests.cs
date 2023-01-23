@@ -67,10 +67,10 @@ namespace TestProyectoFinal
         {
             // ARRANGE
             Usuario sut = new Usuario();
-            sut.crearCuenta("123456789", "Cuenta de nomina", 15000, "Corriente");
+            Cuentas cuenta = sut.crearCuenta("123456789", "Cuenta de nomina", 15000, "Corriente");
            
             // ACT
-            sut.crearTransaccion("Ingreso", "123456789", "Salario", 45000, "DOP", "Pago quincenal de nomina", DateTime.Now);         
+            sut.crearTransaccion("Ingreso", cuenta, "Salario", 45000, "DOP", "Pago quincenal de nomina", DateTime.Now);         
 
             // ASSERT
             Assert.Equal(60000, sut.cuentas[0].Balance);
@@ -81,10 +81,10 @@ namespace TestProyectoFinal
         {
             // ARRANGE
             Usuario sut = new Usuario();
-            sut.crearCuenta("123456789", "Cuenta de nomina", 15000, "Corriente");
+            Cuentas cuenta = sut.crearCuenta("123456789", "Cuenta de nomina", 15000, "Corriente");
 
             // ACT
-            sut.crearTransaccion("Gasto", "123456789", "Salario", 15000, "DOP", "Pago quincenal de nomina", DateTime.Now);
+            sut.crearTransaccion("Gasto", cuenta, "Salario", 15000, "DOP", "Pago quincenal de nomina", DateTime.Now);
 
             // ASSERT
             Assert.Equal(0, sut.cuentas[0].Balance);

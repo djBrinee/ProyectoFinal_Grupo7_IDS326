@@ -77,7 +77,8 @@ namespace ProyectoFinal_Grupo7_IDS326
                             //await
                             moneda = "DOP";
                         }
-                        Program.usuario.crearTransaccion(cmbTipo.SelectedItem.ToString(), cmbNoCuenta.SelectedItem.ToString(), cmbCategoria.SelectedItem.ToString(), monto, moneda, txtDescripcion.Text, dtpFechaTransaccion.Value);
+                        Cuentas cuenta = Program.usuario.cuentas.Find(c => c.NoCuenta == cmbNoCuenta.SelectedItem.ToString());
+                        Program.usuario.crearTransaccion(cmbTipo.SelectedItem.ToString(), cuenta, cmbCategoria.SelectedItem.ToString(), monto, moneda, txtDescripcion.Text, dtpFechaTransaccion.Value);
                         MessageBox.Show("Transacción creada correctamente", "Transacción creada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         CargarDatos();
                         VaciarCampos();

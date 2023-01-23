@@ -13,7 +13,7 @@ namespace ProyectoFinal_Grupo7_IDS326
         public List<Cuentas> cuentas { get; set; } =  new List<Cuentas>();
         public List<Categorias> categorias { get; set; } =  new List<Categorias>();
 
-        public bool crearCuenta(string NoCuenta, string Alias, decimal balance, string tipo)
+        public Cuentas crearCuenta(string NoCuenta, string Alias, decimal balance, string tipo)
         {
             if (!long.TryParse(NoCuenta, out long Salida)) 
                 throw new ArgumentException("No. Cuenta debe ser digitado como número ") ;
@@ -23,17 +23,17 @@ namespace ProyectoFinal_Grupo7_IDS326
                
 
                 Cuentas cuenta = new Cuentas(NoCuenta, Alias, balance, tipo);               
-                cuentas.Add(cuenta);
+                this.cuentas.Add(cuenta);
                 if (balance > 0)
                 {
-                    Program.usuario.crearTransaccion("Inicial", NoCuenta, "Inicial", balance, "DOP", "Monto Inicial", DateTime.Now);
+                    Program.usuario.crearTransaccion("Inicial", cuenta, "Inicial", balance, "DOP", "Monto Inicial", DateTime.Now);
                 }
 
-                return true;
+                return cuenta;
             }
             catch (Exception)
             {
-                return false;
+                return null;
             }
         }
         public bool crearCategoria(string nombre, string tipo)
@@ -49,18 +49,18 @@ namespace ProyectoFinal_Grupo7_IDS326
                 return false;
             }
         }
-        public bool crearTransaccion(string Tipo, string NoCuenta, string Categoria, decimal Monto, string Moneda, string Descripcion, DateTime FechaTransaccion)
+        public bool crearTransaccion(string Tipo, Cuentas cuenta, string Categoria, decimal Monto, string Moneda, string Descripcion, DateTime FechaTransaccion)
         {
             try
             {
                 int id;
-                Cuentas cuenta = cuentas.Find(c => c.NoCuenta == NoCuenta);
+                //Cuentas cuenta = this.cuentas.Find(c => c.NoCuenta == NoCuenta);
                 if(cuenta.Transacciones.Count > 0)
                     id = cuenta.Transacciones.Last().Id + 1;
                 else
                     id = 1;
-                Transacciones transaccion = new Transacciones(id, Tipo, NoCuenta, Categoria, Monto, Moneda, Descripcion, FechaTransaccion); //Usar DI?
-                if (Tipo == "Ingreso")
+                Transacciones transaccion = new Transacciones(id, Tipo, cuenta.NoCuenta, Categoria, Monto, Moneda, Descripcion, FechaTransaccion); //Usar DI?
+                if (Tipo == "Ingreso" || Tipo == "Inicial")
                     cuenta.Balance = cuenta.calcularBalance() + Monto;
                 else
                     cuenta.Balance = cuenta.calcularBalance() - Monto;
