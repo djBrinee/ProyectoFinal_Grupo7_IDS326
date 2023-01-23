@@ -190,27 +190,28 @@ namespace ProyectoFinal_Grupo7_IDS326
         private void CargarDatos()
         {
             dt.Rows.Clear();
-            Cuentas cuenta = Program.usuario.cuentas.Find(x => x.Alias == cmbCuentas.SelectedItem.ToString());
-            if (cuenta.Transacciones.Count > 0)
+            if (cmbCuentas.SelectedIndex != -1)
             {
-                foreach (Transacciones transaccion in cuenta.Transacciones)
+                Cuentas cuenta = Program.usuario.cuentas.Find(x => x.Alias == cmbCuentas.SelectedItem.ToString());
+                if (cuenta.Transacciones.Count > 0)
                 {
-                    string[] lst = {transaccion.Id.ToString(), transaccion.Tipo, transaccion.NoCuenta, transaccion.Categoria, transaccion.Monto.ToString(), transaccion.Moneda, transaccion.Descripcion, transaccion.FechaCreacion.ToString(), transaccion.FechaTransaccion.ToString()};
-                    dt.Rows.Add(lst);
+                    foreach (Transacciones transaccion in cuenta.Transacciones)
+                    {
+                        string[] lst = { transaccion.Id.ToString(), transaccion.Tipo, transaccion.NoCuenta, transaccion.Categoria, transaccion.Monto.ToString(), transaccion.Moneda, transaccion.Descripcion, transaccion.FechaCreacion.ToString(), transaccion.FechaTransaccion.ToString() };
+                        dt.Rows.Add(lst);
+                    }
                 }
+                dgvTransacciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvTransacciones.DataSource = dt;
             }
-            dgvTransacciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvTransacciones.DataSource = dt;
         }
 
         private void VaciarCampos()
         {
             cmbNoCuenta.SelectedItem = null;
             cmbCategoria.SelectedItem = null;
-            // Estos dos continúan dando el error -->
-            cmbTipo.Text = ""; // --
-            cmbMoneda.Text= ""; // --
-            // <--
+            cmbMoneda.SelectedItem = null; 
+            cmbTipo.Text = ""; 
             txtMonto.Clear();
             txtDescripcion.Clear();
         }

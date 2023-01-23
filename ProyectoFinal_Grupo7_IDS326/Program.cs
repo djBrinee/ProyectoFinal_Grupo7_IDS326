@@ -15,6 +15,7 @@ namespace ProyectoFinal_Grupo7_IDS326
         [STAThread]
         static void Main()
         {
+            //Cargado data inicial
             usuario.crearCategoria("Servicios", "Gasto");
             usuario.crearCategoria("Salario", "Ingreso");
             Cuentas cuenta = usuario.crearCuenta("4023145535", "Popular", 14500, "Ahorro"); //Cuenta ejemplo 1            
